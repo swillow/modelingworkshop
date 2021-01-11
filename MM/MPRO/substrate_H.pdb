@@ -1,0 +1,109 @@
+USER  MOD reduce.3.3.160602 H: found=0, std=0, add=47, rem=0, adj=0
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD NoAdj-H: C   2 ALA H1  : C   2 ALA N   : C   1 02J C41 :(NH2R)
+USER  MOD NoAdj-H: C   2 ALA H2  : C   2 ALA N   : C   1 02J C41 :(NH2R)
+USER  MOD NoAdj-H: C   5 PJE H16 : C   5 PJE N5  : C   4 LEU C   :(H bumps)
+USER  MOD NoAdj-H: C   5 PJE H15 : C   5 PJE N5  : C   4 LEU C   :(H bumps)
+USER  MOD Single : C   2 ALA N   :NH3+    180:sc=       0   (180deg=0)
+USER  MOD -----------------------------------------------------------------
+HETATM 2369  C4  02J C   1     -10.425   3.420  72.447  1.00 54.38           C
+HETATM 2370  C5  02J C   1      -9.924   2.857  73.642  1.00 63.03           C
+HETATM 2371  C6  02J C   1      -9.345   1.458  73.806  1.00 64.36           C
+HETATM 2372  O1  02J C   1     -10.048   3.755  74.575  1.00 63.01           O
+HETATM 2373  N2  02J C   1     -10.585   4.861  74.114  1.00 56.79           N
+HETATM 2374  C3  02J C   1     -10.848   4.738  72.810  1.00 50.26           C
+HETATM 2375  C41 02J C   1     -11.475   5.798  71.891  1.00 47.56           C
+HETATM 2376  O42 02J C   1     -11.062   5.943  70.793  1.00 47.13           O
+HETATM    0  H6B 02J C   1     -10.017   0.800  73.568  1.00 64.36           H   new
+HETATM    0  H6A 02J C   1      -8.574   1.357  73.226  1.00 64.36           H   new
+HETATM    0  H6  02J C   1      -9.075   1.325  74.728  1.00 64.36           H   new
+HETATM    0  H4  02J C   1     -10.472   3.004  71.572  1.00 54.38           H   new
+ATOM   2377  N   ALA C   2     -12.583   6.625  72.374  1.00 41.65           N
+ATOM   2378  CA  ALA C   2     -13.166   7.625  71.495  1.00 42.30           C
+ATOM   2379  C   ALA C   2     -12.115   8.750  71.241  1.00 41.96           C
+ATOM   2380  O   ALA C   2     -11.466   9.159  72.125  1.00 41.95           O
+ATOM   2381  CB  ALA C   2     -14.397   8.218  72.132  1.00 36.98           C
+ATOM      0  H3  ALA C   2     -13.177   5.979  72.524  1.00 41.65           H   new
+ATOM      0  HA  ALA C   2     -13.417   7.211  70.655  1.00 42.30           H   new
+ATOM      0  HB1 ALA C   2     -14.779   8.884  71.539  1.00 36.98           H   new
+ATOM      0  HB2 ALA C   2     -15.048   7.517  72.293  1.00 36.98           H   new
+ATOM      0  HB3 ALA C   2     -14.157   8.635  72.974  1.00 36.98           H   new
+ATOM   2382  N   VAL C   3     -11.943   9.281  69.911  1.00 34.91           N
+ATOM   2383  CA  VAL C   3     -10.955  10.336  69.666  1.00 36.29           C
+ATOM   2384  C   VAL C   3     -11.663  11.606  69.273  1.00 40.78           C
+ATOM   2385  O   VAL C   3     -12.381  11.617  68.328  1.00 36.69           O
+ATOM   2386  CB  VAL C   3     -10.004   9.895  68.515  1.00 37.53           C
+ATOM   2387  CG1 VAL C   3      -9.130  11.086  68.012  1.00 40.26           C
+ATOM   2388  CG2 VAL C   3      -9.116   8.687  68.955  1.00 43.10           C
+ATOM      0  H   VAL C   3     -12.385   9.025  69.219  1.00 34.91           H   new
+ATOM      0  HA  VAL C   3     -10.439  10.491  70.473  1.00 36.29           H   new
+ATOM      0  HB  VAL C   3     -10.555   9.604  67.771  1.00 37.53           H   new
+ATOM      0 HG11 VAL C   3      -8.549  10.782  67.297  1.00 40.26           H   new
+ATOM      0 HG12 VAL C   3      -9.706  11.793  67.682  1.00 40.26           H   new
+ATOM      0 HG13 VAL C   3      -8.591  11.424  68.744  1.00 40.26           H   new
+ATOM      0 HG21 VAL C   3      -8.533   8.430  68.223  1.00 43.10           H   new
+ATOM      0 HG22 VAL C   3      -8.579   8.942  69.722  1.00 43.10           H   new
+ATOM      0 HG23 VAL C   3      -9.684   7.938  69.194  1.00 43.10           H   new
+ATOM   2389  N   LEU C   4     -11.480  12.678  70.044  1.00 37.32           N
+ATOM   2390  CA  LEU C   4     -12.170  13.963  69.746  1.00 39.95           C
+ATOM   2391  C   LEU C   4     -11.804  14.454  68.341  1.00 38.38           C
+ATOM   2392  O   LEU C   4     -10.606  14.442  68.036  1.00 44.55           O
+ATOM   2393  CB  LEU C   4     -11.795  14.995  70.811  1.00 41.97           C
+ATOM   2394  CG  LEU C   4     -12.566  14.876  72.122  1.00 45.86           C
+ATOM   2395  CD1 LEU C   4     -12.470  16.162  72.925  1.00 43.70           C
+ATOM   2396  CD2 LEU C   4     -14.017  14.514  71.861  1.00 43.98           C
+ATOM      0  H   LEU C   4     -10.971  12.695  70.737  1.00 37.32           H   new
+ATOM      0  HA  LEU C   4     -13.131  13.829  69.767  1.00 39.95           H   new
+ATOM      0  HB2 LEU C   4     -10.847  14.915  71.000  1.00 41.97           H   new
+ATOM      0  HB3 LEU C   4     -11.938  15.883  70.447  1.00 41.97           H   new
+ATOM      0  HG  LEU C   4     -12.164  14.164  72.644  1.00 45.86           H   new
+ATOM      0 HD11 LEU C   4     -12.966  16.065  73.753  1.00 43.70           H   new
+ATOM      0 HD12 LEU C   4     -11.540  16.349  73.126  1.00 43.70           H   new
+ATOM      0 HD13 LEU C   4     -12.843  16.894  72.409  1.00 43.70           H   new
+ATOM      0 HD21 LEU C   4     -14.490  14.443  72.705  1.00 43.98           H   new
+ATOM      0 HD22 LEU C   4     -14.430  15.203  71.317  1.00 43.98           H   new
+ATOM      0 HD23 LEU C   4     -14.060  13.665  71.394  1.00 43.98           H   new
+HETATM 2397  C19 PJE C   5     -11.832  15.491  65.878  1.00 20.00           C
+HETATM 2398  C20 PJE C   5     -12.422  16.890  65.699  1.00 20.00           C
+HETATM 2399  C21 PJE C   5     -11.667  17.948  65.902  1.00 20.00           C
+HETATM 2400  C22 PJE C   5     -10.208  17.820  66.347  1.00 20.00           C
+HETATM 2401  C25 PJE C   5     -12.437  14.594  64.806  1.00 20.00           C
+HETATM 2402  C26 PJE C   5     -11.835  13.199  64.838  1.00 20.00           C
+HETATM 2403  C27 PJE C   5     -10.368  13.241  64.572  1.00 20.00           C
+HETATM 2404  C28 PJE C   5     -10.110  11.892  63.885  1.00 20.00           C
+HETATM 2405  N6  PJE C   5     -11.386  11.531  63.232  1.00 20.00           N
+HETATM 2406  C29 PJE C   5     -12.428  12.306  63.787  1.00 20.00           C
+HETATM 2407  O8  PJE C   5     -13.559  12.260  63.495  1.00 20.00           O
+HETATM 2408  N5  PJE C   5     -12.282  14.994  67.123  1.00 20.00           N
+HETATM 2409  O7  PJE C   5      -9.943  17.785  67.572  1.00 20.00           O
+HETATM    0  H9  PJE C   5     -12.025  12.853  65.724  1.00 20.00           H   new
+HETATM    0  H8  PJE C   5     -13.397  14.536  64.935  1.00 20.00           H   new
+HETATM    0  H7  PJE C   5     -12.292  14.990  63.932  1.00 20.00           H   new
+HETATM    0  H4  PJE C   5     -12.044  18.831  65.766  1.00 20.00           H   new
+HETATM    0  H2  PJE C   5     -13.350  16.997  65.437  1.00 20.00           H   new
+HETATM    0  H14 PJE C   5     -11.479  10.942  62.612  1.00 20.00           H   new
+HETATM    0  H13 PJE C   5      -9.393  11.962  63.236  1.00 20.00           H   new
+HETATM    0  H12 PJE C   5      -9.844  11.217  64.529  1.00 20.00           H   new
+HETATM    0  H11 PJE C   5     -10.127  13.988  64.002  1.00 20.00           H   new
+HETATM    0  H10 PJE C   5      -9.856  13.332  65.391  1.00 20.00           H   new
+HETATM    0  H1  PJE C   5     -10.864  15.513  65.826  1.00 20.00           H   new
+HETATM    0  H15 PJE C   5     -13.282  14.994  67.123  1.00 20.00           H   new
+HETATM 2410  C   010 C   6      -7.901  17.649  66.696  1.00 63.14           C
+HETATM 2411  O   010 C   6      -8.911  17.849  65.703  1.00 52.13           O
+HETATM 2412  C1  010 C   6      -5.810  18.997  67.259  1.00 68.45           C
+HETATM 2413  C2  010 C   6      -5.138  20.205  67.439  1.00 70.02           C
+HETATM 2414  C3  010 C   6      -5.815  21.414  67.257  1.00 58.91           C
+HETATM 2415  C4  010 C   6      -7.156  21.406  66.898  1.00 57.63           C
+HETATM 2416  C5  010 C   6      -7.831  20.201  66.715  1.00 62.65           C
+HETATM 2417  C6  010 C   6      -7.153  18.994  66.896  1.00 66.95           C
+HETATM    0  HA  010 C   6      -8.299  17.355  67.530  1.00 63.14           H   new
+HETATM    0  H5  010 C   6      -8.768  20.201  66.463  1.00 62.65           H   new
+HETATM    0  H4  010 C   6      -7.626  22.245  66.774  1.00 57.63           H   new
+HETATM    0  H3  010 C   6      -5.349  22.256  67.381  1.00 58.91           H   new
+HETATM    0  H2  010 C   6      -4.201  20.206  67.690  1.00 70.02           H   new
+HETATM    0  H1  010 C   6      -5.341  18.158  67.387  1.00 68.45           H   new
+HETATM    0  H   010 C   6      -7.283  16.955  66.417  1.00 63.14           H   new

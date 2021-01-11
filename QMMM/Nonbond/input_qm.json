@@ -1,0 +1,21 @@
+{
+    "theory": "qm",
+    "job": "ener",
+    "qm": {
+        "method": "mp2",
+        "basis": "aug-cc-pVDZ",
+        "charge": 0,
+        "fname_geom": "./Nonbond/monomer2.xyz",
+        "esp": true,
+        "esp_opts": {
+            "resp": true,
+            "resp_hfree": true
+        }
+    },
+    "geomopt": {
+        "fname_gopt_xyz": "./Nonbond/gopt.xyz",
+        "fname_gopt_log": "./Nonbond/gopt.log",
+        "fname_qm_xyz": "./Nonbond/qm_optimized.xyz",
+        "fname_mm_xyz": "./Nonbond/mm_optimized.xyz"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "theory": "qm",
+    "job": "ener",
+    "qm": {
+        "method": "mp2",
+        "basis": "aug-cc-pVDZ",
+        "charge": 0,
+        "fname_geom": "./Nonbond/wat2_iconf3.xyz",
+        "fixed_atom_list": [],
+        "constraints_list": [],
+        "esp": true,
+        "esp_opts": {
+            "resp": true,
+            "resp_hfree": true
+        }
+    },
+    "mm": {
+        "fname_prmtop": "mm_step4.prmtop",
+        "fname_geom": "mm_step4.pdb",
+        "fixed_atom_list": [
+            2312,
+            2314,
+            2714,
+            2716
+        ]
+    },
+    "geomopt": {
+        "fname_gopt_xyz": "./Bond/gopt.xyz",
+        "fname_gopt_log": "./Bond/gopt.log",
+        "fname_qm_xyz": "./Bond/qm_optimized.xyz",
+        "fname_mm_xyz": "./Bond/mm_optimized.xyz"
+    }
+}

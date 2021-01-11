@@ -1,0 +1,10 @@
+{
+    "fname_monomer_pqr": "monomer.pqr",
+    "fname_monomer1_pdb": "monomer1.pdb",
+    "fname_monomer2_pdb": "monomer2.pdb",
+    "R": [ [-1.0, 0.0, 0.0],
+           [ 0.0, 1.0, 0.0],
+           [ 0.0, 0.0,-1.0]
+    ],
+    "T": [ -43.04696, 0.00, 94.23992]
+}

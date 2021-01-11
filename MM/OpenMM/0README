@@ -1,0 +1,23 @@
+Goal: Since the initial system is not in equilibrium, here is how to bring the system into equilibrium.
+0) minimization: Reduce overlapping atoms. 
+python AmberOpenMM.py -i input_min.json
+
+1) NVT with constraints: The lipid molecules are allowed to move in the XY plane while the protein is fixed.
+python AmberOpenMM.py -i input_step1_nvt.json
+
+2) NVT without constraints:
+python AmberOpenMM.py -i input_step2_nvt.json
+
+3) NPT with MonteCarloMembraneBarostat
+python AmberOpenMM.py -i input_step3_npt.json
+
+4) NPT with MonteCarloBarostat
+python AmberOpenMM.py -i input_step4_npt.json
+
+*** (Now we get the system in equilibrium) ***
+From the following steps, you run a NPT MD simulation for the production (data analysis).
+
+5) NPT with MonteCarloBarostat 
+python AmberOpenMM.py -i input_step5_npt.json
+
+

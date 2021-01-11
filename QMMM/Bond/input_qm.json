@@ -1,0 +1,21 @@
+{
+    "theory": "qm",
+    "job": "ener",
+    "qm": {
+        "method": "mp2",
+        "basis": "aug-cc-pVDZ",
+        "charge": 0,
+        "fname_geom": "./Bond/wat_roh_0.995.xyz",
+        "esp": true,
+        "esp_opts": {
+            "resp": true,
+            "resp_hfree": true
+        }
+    },
+    "geomopt": {
+        "fname_gopt_xyz": "gopt.xyz",
+        "fname_gopt_log": "gopt.log",
+        "fname_qm_xyz": "qm_optimized.xyz",
+        "fname_mm_xyz": "mm_optimized.xyz"
+    }
+}

@@ -1,0 +1,495 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2020-07-14</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="P5" element="P" mass="30.9700" name="cdn-P5" />
+    <Type class="OH" element="O" mass="16.0000" name="cdn-OH" />
+    <Type class="OS" element="O" mass="16.0000" name="cdn-OS" />
+    <Type class="O" element="O" mass="16.0000" name="cdn-O" />
+    <Type class="C3" element="C" mass="12.0100" name="cdn-C3" />
+    <Type class="C" element="C" mass="12.0100" name="cdn-C" />
+    <Type class="HO" element="H" mass="1.0080" name="cdn-HO" />
+    <Type class="H1" element="H" mass="1.0080" name="cdn-H1" />
+    <Type class="H2" element="H" mass="1.0080" name="cdn-H2" />
+    <Type class="HC" element="H" mass="1.0080" name="cdn-HC" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="CDN">
+      <Atom charge="  1.426800" name="PB2" type="cdn-P5" />
+      <Atom charge=" -0.605200" name="O1" type="cdn-OH" />
+      <Atom charge=" -0.568600" name="OB5" type="cdn-OS" />
+      <Atom charge=" -0.575600" name="OB2" type="cdn-OS" />
+      <Atom charge=" -0.829900" name="OB3" type="cdn-O" />
+      <Atom charge=" -0.829900" name="OB4" type="cdn-O" />
+      <Atom charge="  0.128400" name="CB2" type="cdn-C3" />
+      <Atom charge="  0.113100" name="C1" type="cdn-C3" />
+      <Atom charge="  0.191400" name="CB3" type="cdn-C3" />
+      <Atom charge="  0.088100" name="CB4" type="cdn-C3" />
+      <Atom charge="  0.092400" name="CB6" type="cdn-C3" />
+      <Atom charge=" -0.425300" name="OB8" type="cdn-OS" />
+      <Atom charge=" -0.578400" name="OB9" type="cdn-O" />
+      <Atom charge="  0.637100" name="CB7" type="cdn-C" />
+      <Atom charge=" -0.133400" name="C71" type="cdn-C3" />
+      <Atom charge=" -0.077400" name="C72" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C73" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C74" type="cdn-C3" />
+      <Atom charge=" -0.091100" name="C75" type="cdn-C3" />
+      <Atom charge=" -0.419300" name="OB6" type="cdn-OS" />
+      <Atom charge=" -0.581400" name="OB7" type="cdn-O" />
+      <Atom charge="  0.640100" name="CB5" type="cdn-C" />
+      <Atom charge=" -0.129400" name="C51" type="cdn-C3" />
+      <Atom charge=" -0.085400" name="C52" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C53" type="cdn-C3" />
+      <Atom charge=" -0.079400" name="C54" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C55" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C56" type="cdn-C3" />
+      <Atom charge=" -0.076400" name="C57" type="cdn-C3" />
+      <Atom charge=" -0.079400" name="C58" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C59" type="cdn-C3" />
+      <Atom charge=" -0.076400" name="C60" type="cdn-C3" />
+      <Atom charge=" -0.081400" name="C61" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C62" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C63" type="cdn-C3" />
+      <Atom charge=" -0.092100" name="C64" type="cdn-C3" />
+      <Atom charge="  1.430800" name="PA1" type="cdn-P5" />
+      <Atom charge=" -0.570600" name="OA5" type="cdn-OS" />
+      <Atom charge=" -0.595600" name="OA2" type="cdn-OS" />
+      <Atom charge=" -0.828400" name="OA4" type="cdn-O" />
+      <Atom charge=" -0.828400" name="OA3" type="cdn-O" />
+      <Atom charge="  0.147400" name="CA2" type="cdn-C3" />
+      <Atom charge="  0.199400" name="CA3" type="cdn-C3" />
+      <Atom charge="  0.116100" name="CA4" type="cdn-C3" />
+      <Atom charge="  0.112400" name="CA6" type="cdn-C3" />
+      <Atom charge=" -0.408100" name="OA8" type="cdn-OS" />
+      <Atom charge=" -0.578200" name="OA9" type="cdn-O" />
+      <Atom charge="  0.631100" name="CA7" type="cdn-C" />
+      <Atom charge=" -0.130400" name="C31" type="cdn-C3" />
+      <Atom charge=" -0.077400" name="C32" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C33" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C34" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C35" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C36" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C37" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C38" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C39" type="cdn-C3" />
+      <Atom charge=" -0.083400" name="C40" type="cdn-C3" />
+      <Atom charge=" -0.080400" name="C41" type="cdn-C3" />
+      <Atom charge=" -0.093100" name="C42" type="cdn-C3" />
+      <Atom charge=" -0.446800" name="OA6" type="cdn-OS" />
+      <Atom charge=" -0.647000" name="OA7" type="cdn-OH" />
+      <Atom charge="  0.336900" name="CA5" type="cdn-C3" />
+      <Atom charge=" -0.109400" name="C11" type="cdn-C3" />
+      <Atom charge=" -0.071400" name="C12" type="cdn-C3" />
+      <Atom charge=" -0.082400" name="C13" type="cdn-C3" />
+      <Atom charge=" -0.077400" name="C14" type="cdn-C3" />
+      <Atom charge=" -0.081400" name="C15" type="cdn-C3" />
+      <Atom charge=" -0.079400" name="C16" type="cdn-C3" />
+      <Atom charge=" -0.084400" name="C17" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C18" type="cdn-C3" />
+      <Atom charge=" -0.081400" name="C19" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C20" type="cdn-C3" />
+      <Atom charge=" -0.081400" name="C21" type="cdn-C3" />
+      <Atom charge=" -0.078400" name="C22" type="cdn-C3" />
+      <Atom charge=" -0.085400" name="C23" type="cdn-C3" />
+      <Atom charge=" -0.091100" name="C24" type="cdn-C3" />
+      <Atom charge="  0.420000" name="HO11" type="cdn-HO" />
+      <Atom charge="  0.054700" name="HC11" type="cdn-H1" />
+      <Atom charge="  0.125700" name="HB62" type="cdn-H1" />
+      <Atom charge="  0.125700" name="HB61" type="cdn-H1" />
+      <Atom charge="  0.075700" name="HB41" type="cdn-H1" />
+      <Atom charge="  0.046700" name="HB33" type="cdn-H1" />
+      <Atom charge="  0.046700" name="HB32" type="cdn-H1" />
+      <Atom charge="  0.057200" name="HB22" type="cdn-H1" />
+      <Atom charge="  0.057200" name="HB21" type="cdn-H1" />
+      <Atom charge="  0.468000" name="HA7O" type="cdn-HO" />
+      <Atom charge="  0.057700" name="HA62" type="cdn-H1" />
+      <Atom charge="  0.057700" name="HA61" type="cdn-H1" />
+      <Atom charge="  0.040700" name="HA51" type="cdn-H2" />
+      <Atom charge="  0.084700" name="HA41" type="cdn-H1" />
+      <Atom charge="  0.042700" name="HA32" type="cdn-H1" />
+      <Atom charge="  0.042700" name="HA31" type="cdn-H1" />
+      <Atom charge="  0.035200" name="HA22" type="cdn-H1" />
+      <Atom charge="  0.035200" name="HA21" type="cdn-H1" />
+      <Atom charge="  0.027700" name="H753" type="cdn-HC" />
+      <Atom charge="  0.027700" name="H752" type="cdn-HC" />
+      <Atom charge="  0.027700" name="H751" type="cdn-HC" />
+      <Atom charge="  0.039700" name="H742" type="cdn-HC" />
+      <Atom charge="  0.039700" name="H741" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H732" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H731" type="cdn-HC" />
+      <Atom charge="  0.054700" name="H722" type="cdn-HC" />
+      <Atom charge="  0.054700" name="H721" type="cdn-HC" />
+      <Atom charge="  0.074700" name="H712" type="cdn-HC" />
+      <Atom charge="  0.074700" name="H711" type="cdn-HC" />
+      <Atom charge="  0.030033" name="H643" type="cdn-HC" />
+      <Atom charge="  0.030033" name="H642" type="cdn-HC" />
+      <Atom charge="  0.030033" name="H641" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H632" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H631" type="cdn-HC" />
+      <Atom charge="  0.037700" name="H622" type="cdn-HC" />
+      <Atom charge="  0.037700" name="H621" type="cdn-HC" />
+      <Atom charge="  0.044700" name="H612" type="cdn-HC" />
+      <Atom charge="  0.044700" name="H611" type="cdn-HC" />
+      <Atom charge="  0.034200" name="H602" type="cdn-HC" />
+      <Atom charge="  0.034200" name="H601" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H592" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H591" type="cdn-HC" />
+      <Atom charge="  0.039700" name="H582" type="cdn-HC" />
+      <Atom charge="  0.039700" name="H581" type="cdn-HC" />
+      <Atom charge="  0.036700" name="H572" type="cdn-HC" />
+      <Atom charge="  0.036700" name="H571" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H562" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H561" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H552" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H551" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H542" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H541" type="cdn-HC" />
+      <Atom charge="  0.037700" name="H532" type="cdn-HC" />
+      <Atom charge="  0.037700" name="H531" type="cdn-HC" />
+      <Atom charge="  0.066200" name="H522" type="cdn-HC" />
+      <Atom charge="  0.066200" name="H521" type="cdn-HC" />
+      <Atom charge="  0.068200" name="H512" type="cdn-HC" />
+      <Atom charge="  0.068200" name="H511" type="cdn-HC" />
+      <Atom charge="  0.030700" name="H423" type="cdn-HC" />
+      <Atom charge="  0.030700" name="H422" type="cdn-HC" />
+      <Atom charge="  0.030700" name="H421" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H412" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H411" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H402" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H401" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H392" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H391" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H382" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H381" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H372" type="cdn-HC" />
+      <Atom charge="  0.038700" name="H371" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H362" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H361" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H352" type="cdn-HC" />
+      <Atom charge="  0.038200" name="H351" type="cdn-HC" />
+      <Atom charge="  0.043200" name="H342" type="cdn-HC" />
+      <Atom charge="  0.043200" name="H341" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H332" type="cdn-HC" />
+      <Atom charge="  0.039200" name="H331" type="cdn-HC" />
+      <Atom charge="  0.057200" name="H322" type="cdn-HC" />
+      <Atom charge="  0.057200" name="H321" type="cdn-HC" />
+      <Atom charge="  0.070200" name="H312" type="cdn-HC" />
+      <Atom charge="  0.070200" name="H311" type="cdn-HC" />
+      <Atom charge="  0.029033" name="H243" type="cdn-HC" />
+      <Atom charge="  0.029033" name="H242" type="cdn-HC" />
+      <Atom charge="  0.029033" name="H241" type="cdn-HC" />
+      <Atom charge="  0.041700" name="H232" type="cdn-HC" />
+      <Atom charge="  0.041700" name="H231" type="cdn-HC" />
+      <Atom charge="  0.036700" name="H222" type="cdn-HC" />
+      <Atom charge="  0.036700" name="H221" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H212" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H211" type="cdn-HC" />
+      <Atom charge="  0.036200" name="H202" type="cdn-HC" />
+      <Atom charge="  0.036200" name="H201" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H192" type="cdn-HC" />
+      <Atom charge="  0.040700" name="H191" type="cdn-HC" />
+      <Atom charge="  0.037200" name="H182" type="cdn-HC" />
+      <Atom charge="  0.037200" name="H181" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H172" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H171" type="cdn-HC" />
+      <Atom charge="  0.035200" name="H162" type="cdn-HC" />
+      <Atom charge="  0.035200" name="H161" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H152" type="cdn-HC" />
+      <Atom charge="  0.042200" name="H151" type="cdn-HC" />
+      <Atom charge="  0.030700" name="H142" type="cdn-HC" />
+      <Atom charge="  0.030700" name="H141" type="cdn-HC" />
+      <Atom charge="  0.052700" name="H132" type="cdn-HC" />
+      <Atom charge="  0.052700" name="H131" type="cdn-HC" />
+      <Atom charge="  0.034200" name="H122" type="cdn-HC" />
+      <Atom charge="  0.034200" name="H121" type="cdn-HC" />
+      <Atom charge="  0.080200" name="H112" type="cdn-HC" />
+      <Atom charge="  0.080200" name="H111" type="cdn-HC" />
+      <Bond atomName1="PB2" atomName2="OB5" />
+      <Bond atomName1="PB2" atomName2="OB2" />
+      <Bond atomName1="PB2" atomName2="OB3" />
+      <Bond atomName1="PB2" atomName2="OB4" />
+      <Bond atomName1="O1" atomName2="C1" />
+      <Bond atomName1="OB5" atomName2="CB3" />
+      <Bond atomName1="OB2" atomName2="CB2" />
+      <Bond atomName1="CB2" atomName2="C1" />
+      <Bond atomName1="C1" atomName2="CA2" />
+      <Bond atomName1="CB3" atomName2="CB4" />
+      <Bond atomName1="CB4" atomName2="CB6" />
+      <Bond atomName1="CB4" atomName2="OB6" />
+      <Bond atomName1="CB6" atomName2="OB8" />
+      <Bond atomName1="OB8" atomName2="CB7" />
+      <Bond atomName1="OB9" atomName2="CB7" />
+      <Bond atomName1="CB7" atomName2="C71" />
+      <Bond atomName1="C71" atomName2="C72" />
+      <Bond atomName1="C72" atomName2="C73" />
+      <Bond atomName1="C73" atomName2="C74" />
+      <Bond atomName1="C74" atomName2="C75" />
+      <Bond atomName1="OB6" atomName2="CB5" />
+      <Bond atomName1="OB7" atomName2="CB5" />
+      <Bond atomName1="CB5" atomName2="C51" />
+      <Bond atomName1="C51" atomName2="C52" />
+      <Bond atomName1="C52" atomName2="C53" />
+      <Bond atomName1="C53" atomName2="C54" />
+      <Bond atomName1="C54" atomName2="C55" />
+      <Bond atomName1="C55" atomName2="C56" />
+      <Bond atomName1="C56" atomName2="C57" />
+      <Bond atomName1="C57" atomName2="C58" />
+      <Bond atomName1="C58" atomName2="C59" />
+      <Bond atomName1="C59" atomName2="C60" />
+      <Bond atomName1="C60" atomName2="C61" />
+      <Bond atomName1="C61" atomName2="C62" />
+      <Bond atomName1="C62" atomName2="C63" />
+      <Bond atomName1="C63" atomName2="C64" />
+      <Bond atomName1="PA1" atomName2="OA5" />
+      <Bond atomName1="PA1" atomName2="OA2" />
+      <Bond atomName1="PA1" atomName2="OA4" />
+      <Bond atomName1="PA1" atomName2="OA3" />
+      <Bond atomName1="OA5" atomName2="CA3" />
+      <Bond atomName1="OA2" atomName2="CA2" />
+      <Bond atomName1="CA3" atomName2="CA4" />
+      <Bond atomName1="CA4" atomName2="CA6" />
+      <Bond atomName1="CA4" atomName2="OA6" />
+      <Bond atomName1="CA6" atomName2="OA8" />
+      <Bond atomName1="OA8" atomName2="CA7" />
+      <Bond atomName1="OA9" atomName2="CA7" />
+      <Bond atomName1="CA7" atomName2="C31" />
+      <Bond atomName1="C31" atomName2="C32" />
+      <Bond atomName1="C32" atomName2="C33" />
+      <Bond atomName1="C33" atomName2="C34" />
+      <Bond atomName1="C34" atomName2="C35" />
+      <Bond atomName1="C35" atomName2="C36" />
+      <Bond atomName1="C36" atomName2="C37" />
+      <Bond atomName1="C37" atomName2="C38" />
+      <Bond atomName1="C38" atomName2="C39" />
+      <Bond atomName1="C39" atomName2="C40" />
+      <Bond atomName1="C40" atomName2="C41" />
+      <Bond atomName1="C41" atomName2="C42" />
+      <Bond atomName1="OA6" atomName2="CA5" />
+      <Bond atomName1="OA7" atomName2="CA5" />
+      <Bond atomName1="CA5" atomName2="C11" />
+      <Bond atomName1="C11" atomName2="C12" />
+      <Bond atomName1="C12" atomName2="C13" />
+      <Bond atomName1="C13" atomName2="C14" />
+      <Bond atomName1="C14" atomName2="C15" />
+      <Bond atomName1="C15" atomName2="C16" />
+      <Bond atomName1="C16" atomName2="C17" />
+      <Bond atomName1="C17" atomName2="C18" />
+      <Bond atomName1="C18" atomName2="C19" />
+      <Bond atomName1="C19" atomName2="C20" />
+      <Bond atomName1="C20" atomName2="C21" />
+      <Bond atomName1="C21" atomName2="C22" />
+      <Bond atomName1="C22" atomName2="C23" />
+      <Bond atomName1="C23" atomName2="C24" />
+      <Bond atomName1="O1" atomName2="HO11" />
+      <Bond atomName1="CB2" atomName2="HB22" />
+      <Bond atomName1="CB2" atomName2="HB21" />
+      <Bond atomName1="C1" atomName2="HC11" />
+      <Bond atomName1="CB3" atomName2="HB33" />
+      <Bond atomName1="CB3" atomName2="HB32" />
+      <Bond atomName1="CB4" atomName2="HB41" />
+      <Bond atomName1="CB6" atomName2="HB62" />
+      <Bond atomName1="CB6" atomName2="HB61" />
+      <Bond atomName1="C71" atomName2="H712" />
+      <Bond atomName1="C71" atomName2="H711" />
+      <Bond atomName1="C72" atomName2="H722" />
+      <Bond atomName1="C72" atomName2="H721" />
+      <Bond atomName1="C73" atomName2="H732" />
+      <Bond atomName1="C73" atomName2="H731" />
+      <Bond atomName1="C74" atomName2="H742" />
+      <Bond atomName1="C74" atomName2="H741" />
+      <Bond atomName1="C75" atomName2="H753" />
+      <Bond atomName1="C75" atomName2="H752" />
+      <Bond atomName1="C75" atomName2="H751" />
+      <Bond atomName1="C51" atomName2="H512" />
+      <Bond atomName1="C51" atomName2="H511" />
+      <Bond atomName1="C52" atomName2="H522" />
+      <Bond atomName1="C52" atomName2="H521" />
+      <Bond atomName1="C53" atomName2="H532" />
+      <Bond atomName1="C53" atomName2="H531" />
+      <Bond atomName1="C54" atomName2="H542" />
+      <Bond atomName1="C54" atomName2="H541" />
+      <Bond atomName1="C55" atomName2="H552" />
+      <Bond atomName1="C55" atomName2="H551" />
+      <Bond atomName1="C56" atomName2="H562" />
+      <Bond atomName1="C56" atomName2="H561" />
+      <Bond atomName1="C57" atomName2="H572" />
+      <Bond atomName1="C57" atomName2="H571" />
+      <Bond atomName1="C58" atomName2="H582" />
+      <Bond atomName1="C58" atomName2="H581" />
+      <Bond atomName1="C59" atomName2="H592" />
+      <Bond atomName1="C59" atomName2="H591" />
+      <Bond atomName1="C60" atomName2="H602" />
+      <Bond atomName1="C60" atomName2="H601" />
+      <Bond atomName1="C61" atomName2="H612" />
+      <Bond atomName1="C61" atomName2="H611" />
+      <Bond atomName1="C62" atomName2="H622" />
+      <Bond atomName1="C62" atomName2="H621" />
+      <Bond atomName1="C63" atomName2="H632" />
+      <Bond atomName1="C63" atomName2="H631" />
+      <Bond atomName1="C64" atomName2="H643" />
+      <Bond atomName1="C64" atomName2="H642" />
+      <Bond atomName1="C64" atomName2="H641" />
+      <Bond atomName1="CA2" atomName2="HA22" />
+      <Bond atomName1="CA2" atomName2="HA21" />
+      <Bond atomName1="CA3" atomName2="HA32" />
+      <Bond atomName1="CA3" atomName2="HA31" />
+      <Bond atomName1="CA4" atomName2="HA41" />
+      <Bond atomName1="CA6" atomName2="HA62" />
+      <Bond atomName1="CA6" atomName2="HA61" />
+      <Bond atomName1="C31" atomName2="H312" />
+      <Bond atomName1="C31" atomName2="H311" />
+      <Bond atomName1="C32" atomName2="H322" />
+      <Bond atomName1="C32" atomName2="H321" />
+      <Bond atomName1="C33" atomName2="H332" />
+      <Bond atomName1="C33" atomName2="H331" />
+      <Bond atomName1="C34" atomName2="H342" />
+      <Bond atomName1="C34" atomName2="H341" />
+      <Bond atomName1="C35" atomName2="H352" />
+      <Bond atomName1="C35" atomName2="H351" />
+      <Bond atomName1="C36" atomName2="H362" />
+      <Bond atomName1="C36" atomName2="H361" />
+      <Bond atomName1="C37" atomName2="H372" />
+      <Bond atomName1="C37" atomName2="H371" />
+      <Bond atomName1="C38" atomName2="H382" />
+      <Bond atomName1="C38" atomName2="H381" />
+      <Bond atomName1="C39" atomName2="H392" />
+      <Bond atomName1="C39" atomName2="H391" />
+      <Bond atomName1="C40" atomName2="H402" />
+      <Bond atomName1="C40" atomName2="H401" />
+      <Bond atomName1="C41" atomName2="H412" />
+      <Bond atomName1="C41" atomName2="H411" />
+      <Bond atomName1="C42" atomName2="H423" />
+      <Bond atomName1="C42" atomName2="H422" />
+      <Bond atomName1="C42" atomName2="H421" />
+      <Bond atomName1="OA7" atomName2="HA7O" />
+      <Bond atomName1="CA5" atomName2="HA51" />
+      <Bond atomName1="C11" atomName2="H112" />
+      <Bond atomName1="C11" atomName2="H111" />
+      <Bond atomName1="C12" atomName2="H122" />
+      <Bond atomName1="C12" atomName2="H121" />
+      <Bond atomName1="C13" atomName2="H132" />
+      <Bond atomName1="C13" atomName2="H131" />
+      <Bond atomName1="C14" atomName2="H142" />
+      <Bond atomName1="C14" atomName2="H141" />
+      <Bond atomName1="C15" atomName2="H152" />
+      <Bond atomName1="C15" atomName2="H151" />
+      <Bond atomName1="C16" atomName2="H162" />
+      <Bond atomName1="C16" atomName2="H161" />
+      <Bond atomName1="C17" atomName2="H172" />
+      <Bond atomName1="C17" atomName2="H171" />
+      <Bond atomName1="C18" atomName2="H182" />
+      <Bond atomName1="C18" atomName2="H181" />
+      <Bond atomName1="C19" atomName2="H192" />
+      <Bond atomName1="C19" atomName2="H191" />
+      <Bond atomName1="C20" atomName2="H202" />
+      <Bond atomName1="C20" atomName2="H201" />
+      <Bond atomName1="C21" atomName2="H212" />
+      <Bond atomName1="C21" atomName2="H211" />
+      <Bond atomName1="C22" atomName2="H222" />
+      <Bond atomName1="C22" atomName2="H221" />
+      <Bond atomName1="C23" atomName2="H232" />
+      <Bond atomName1="C23" atomName2="H231" />
+      <Bond atomName1="C24" atomName2="H243" />
+      <Bond atomName1="C24" atomName2="H242" />
+      <Bond atomName1="C24" atomName2="H241" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="289700.160000" length="0.161500" type1="cdn-OS" type2="cdn-P5" />
+    <Bond k="443085.600000" length="0.148700" type1="cdn-O" type2="cdn-P5" />
+    <Bond k="245517.120000" length="0.142300" type1="cdn-C3" type2="cdn-OH" />
+    <Bond k="238320.640000" length="0.143200" type1="cdn-C3" type2="cdn-OS" />
+    <Bond k="194556.000000" length="0.153800" type1="cdn-C3" type2="cdn-C3" />
+    <Bond k="312042.720000" length="0.135800" type1="cdn-C" type2="cdn-OS" />
+    <Bond k="546095.680000" length="0.121800" type1="cdn-C" type2="cdn-O" />
+    <Bond k="203509.760000" length="0.152400" type1="cdn-C" type2="cdn-C3" />
+    <Bond k="471536.800000" length="0.097300" type1="cdn-HO" type2="cdn-OH" />
+    <Bond k="314553.120000" length="0.109700" type1="cdn-C3" type2="cdn-H1" />
+    <Bond k="314553.120000" length="0.109700" type1="cdn-C3" type2="cdn-HC" />
+    <Bond k="315724.640000" length="0.109600" type1="cdn-C3" type2="cdn-H2" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.086367" k="697.054400" type1="cdn-C3" type2="cdn-OS" type3="cdn-P5" />
+    <Angle angle="1.923179" k="707.932800" type1="cdn-C3" type2="cdn-C3" type3="cdn-OH" />
+    <Angle angle="1.777444" k="702.075200" type1="cdn-OS" type2="cdn-P5" type3="cdn-OS" />
+    <Angle angle="2.015158" k="684.502400" type1="cdn-O" type2="cdn-P5" type3="cdn-OS" />
+    <Angle angle="1.884433" k="713.790400" type1="cdn-C3" type2="cdn-C3" type3="cdn-OS" />
+    <Angle angle="2.021092" k="715.464000" type1="cdn-O" type2="cdn-P5" type3="cdn-O" />
+    <Angle angle="1.946217" k="543.083200" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" />
+    <Angle angle="2.024234" k="559.819200" type1="cdn-C" type2="cdn-OS" type3="cdn-C3" />
+    <Angle angle="2.151119" k="960.646400" type1="cdn-O" type2="cdn-C" type3="cdn-OS" />
+    <Angle angle="1.932429" k="722.995200" type1="cdn-C3" type2="cdn-C" type3="cdn-OS" />
+    <Angle angle="2.150247" k="707.932800" type1="cdn-C3" type2="cdn-C" type3="cdn-O" />
+    <Angle angle="1.938014" k="546.430400" type1="cdn-C" type2="cdn-C3" type3="cdn-C3" />
+    <Angle angle="1.963147" k="554.798400" type1="cdn-C3" type2="cdn-OS" type3="cdn-C3" />
+    <Angle angle="1.909042" k="926.337600" type1="cdn-OH" type2="cdn-C3" type3="cdn-OS" />
+    <Angle angle="1.924401" k="523.000000" type1="cdn-H1" type2="cdn-C3" type3="cdn-OH" />
+    <Angle angle="1.916023" k="522.163200" type1="cdn-H1" type2="cdn-C3" type3="cdn-OS" />
+    <Angle angle="1.912184" k="392.459200" type1="cdn-C3" type2="cdn-C3" type3="cdn-H1" />
+    <Angle angle="1.872041" k="410.032000" type1="cdn-C3" type2="cdn-OH" type3="cdn-HO" />
+    <Angle angle="1.898395" k="396.643200" type1="cdn-C" type2="cdn-C3" type3="cdn-HC" />
+    <Angle angle="1.916372" k="391.622400" type1="cdn-C3" type2="cdn-C3" type3="cdn-HC" />
+    <Angle angle="1.912533" k="522.163200" type1="cdn-H2" type2="cdn-C3" type3="cdn-OS" />
+    <Angle angle="1.909915" k="525.510400" type1="cdn-H2" type2="cdn-C3" type3="cdn-OH" />
+    <Angle angle="1.923703" k="390.785600" type1="cdn-C3" type2="cdn-C3" type3="cdn-H2" />
+    <Angle angle="1.892985" k="324.678400" type1="cdn-H1" type2="cdn-C3" type3="cdn-H1" />
+    <Angle angle="1.877626" k="326.352000" type1="cdn-HC" type2="cdn-C3" type3="cdn-HC" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.907928" periodicity1="3" phase1="0.0000000000000000" type1="cdn-P5" type2="cdn-OS" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="cdn-OH" type2="cdn-C3" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="cdn-OS" type2="cdn-C3" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-OH" type4="cdn-HO" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="cdn-OS" type2="cdn-C" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="3.472720" periodicity1="1" phase1="0.0000000000000000" type1="cdn-O" type2="cdn-C" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C" type2="cdn-OS" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="0.334720" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-OS" type3="cdn-C3" type4="cdn-H2" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.0000000000000000" type1="cdn-OS" type2="cdn-C3" type3="cdn-OH" type4="cdn-HO" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="cdn-OS" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="2.133840" periodicity1="1" phase1="0.0000000000000000" type1="cdn-OH" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="1.410008" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-OS" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" type4="cdn-H2" />
+    <Proper k1="0.472792" periodicity1="3" phase1="0.0000000000000000" type1="cdn-HO" type2="cdn-OH" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-H1" type2="cdn-C3" type3="cdn-C3" type4="cdn-H1" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.0000000000000000" type1="cdn-HO" type2="cdn-OH" type3="cdn-C3" type4="cdn-H2" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-H2" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="0.502080" periodicity1="3" phase1="0.0000000000000000" type1="cdn-HC" type2="cdn-C3" type3="cdn-C3" type4="cdn-HC" />
+    <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="cdn-P5" type2="cdn-OS" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.083680" periodicity1="1" phase1="3.1415926535897931" type1="cdn-OH" type2="cdn-C3" type3="cdn-C3" type4="cdn-OS" />
+    <Proper k1="10.920240" periodicity1="2" phase1="0.0000000000000000" type1="cdn-OS" type2="cdn-P5" type3="cdn-OS" type4="cdn-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-OS" type2="cdn-C3" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.711280" periodicity1="1" phase1="3.1415926535897931" type1="cdn-OS" type2="cdn-C3" type3="cdn-C3" type4="cdn-OS" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="cdn-O" type2="cdn-P5" type3="cdn-OS" type4="cdn-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" type4="cdn-OS" />
+    <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="cdn-C3" type2="cdn-C3" type3="cdn-OS" type4="cdn-P5" />
+    <Proper k1="3.347200" periodicity1="1" phase1="3.1415926535897931" type1="cdn-C3" type2="cdn-C3" type3="cdn-OS" type4="cdn-C" />
+    <Proper k1="5.857600" periodicity1="1" phase1="3.1415926535897931" type1="cdn-C3" type2="cdn-OS" type3="cdn-C" type4="cdn-O" />
+    <Proper k1="6.610720" periodicity1="1" phase1="3.1415926535897931" type1="cdn-C3" type2="cdn-OS" type3="cdn-C" type4="cdn-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="cdn-OS" type2="cdn-C" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="3.096160" periodicity1="1" phase1="0.0000000000000000" type1="cdn-O" type2="cdn-C" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.418400" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C" type2="cdn-C3" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.460240" periodicity1="1" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.000000" periodicity1="1" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-C3" type3="cdn-OS" type4="cdn-C3" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-OS" type3="cdn-C3" type4="cdn-OH" />
+    <Proper k1="0.000000" periodicity1="1" phase1="0.0000000000000000" type1="cdn-C3" type2="cdn-OS" type3="cdn-C3" type4="cdn-C3" />
+    <Proper k1="0.878640" periodicity1="3" phase1="0.0000000000000000" type1="cdn-OH" type2="cdn-C3" type3="cdn-C3" type4="cdn-C3" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="cdn-C3" type2="cdn-O" type3="cdn-C" type4="cdn-OS" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.9602280" sigma="0.3694022445711587" type="cdn-P5" />
+    <Atom epsilon="0.3891120" sigma="0.3242871333503238" type="cdn-OH" />
+    <Atom epsilon="0.3037584" sigma="0.3156097800335680" type="cdn-OS" />
+    <Atom epsilon="0.6121192" sigma="0.3048120873800651" type="cdn-O" />
+    <Atom epsilon="0.4510352" sigma="0.3397709531257257" type="cdn-C3" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="cdn-C" />
+    <Atom epsilon="0.0196648" sigma="0.0537924646085430" type="cdn-HO" />
+    <Atom epsilon="0.0870272" sigma="0.2421997255202334" type="cdn-H1" />
+    <Atom epsilon="0.0870272" sigma="0.2243817511424393" type="cdn-H2" />
+    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="cdn-HC" />
+  </NonbondedForce>
+</ForceField>

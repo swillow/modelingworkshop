@@ -1,0 +1,21 @@
+{
+    "job": "npt",
+    "npt": {
+        "pdb": "step4_20.pdb",
+        "prmtop": "input.prmtop",
+        "save_pdb": "step5.pdb",
+        "load_state": "step4_20.rst",
+        "save_state": "step5.rst",
+        "stdout": "bomd_npt_step5.dat",
+        "dcd": "traj_step5.dcd",
+        "dt_fs": 2.0,
+        "Temperature": 300.0,
+	"Barostat" : "MonteCarloBarostat",
+	"Pressure" : 1.0,
+        "Platform": "OpenCL",
+        "nstep_cycle": 125000,
+        "ncycle": 80,
+        "nstdout": 1000,
+        "ndcd": 5000
+    }
+}

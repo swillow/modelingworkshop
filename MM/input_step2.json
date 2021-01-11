@@ -1,0 +1,19 @@
+{
+    "fname_protein": "opm_1zoy.pdb",
+    "protein_charge": -8,
+    "fname_system": "opm_1zoy_mem_wat.pdb",
+    "box": [
+        120,
+        120,
+        120
+    ],
+    "membrane": {
+        "fname_unit": "dppe_box15.pdb",
+        "bool": true 
+    },
+    "solvent": {
+        "fname_unit": "water_box15.xyz",
+        "bool": true,
+        "NaCl(Molarity)": 0.1
+    }
+}

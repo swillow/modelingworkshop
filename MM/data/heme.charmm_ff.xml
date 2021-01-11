@@ -1,0 +1,343 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2019-06-28</DateGenerated>
+    <Note> From Charmm 36 </Note>
+  </Info>
+  <AtomTypes>
+    <Type class="HA" element="H" mass="1.008" name="hem-HA" />
+    <Type class="HE1" element="H" mass="1.008" name="hem-HE1" />
+    <Type class="HE2" element="H" mass="1.008" name="hem-HE2" />
+    <Type class="HA2" element="H" mass="1.008" name="hem-HA2" />
+    <Type class="HA3" element="H" mass="1.008" name="hem-HA3" />
+    <Type class="CT2" element="C" mass="12.011" name="hem-CT2" />
+    <Type class="CT3" element="C" mass="12.011" name="hem-CT3" />
+    <Type class="CC" element="C" mass="12.011" name="hem-CC" />
+    <Type class="CE1" element="C" mass="12.011" name="hem-CE1" />
+    <Type class="CE2" element="C" mass="12.011" name="hem-CE2" />
+    <Type class="OC" element="O" mass="15.999" name="hem-OC" />
+    <Type class="CPA" element="C" mass="12.011" name="hem-CPA" />
+    <Type class="CPB" element="C" mass="12.011" name="hem-CPB" />
+    <Type class="CPM" element="C" mass="12.011" name="hem-CPM" />
+    <Type class="NPH" element="N" mass="14.007" name="hem-NPH" />
+    <Type class="FE" element="Fe" mass="55.847" name="hem-FE" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="HEM">
+      <Atom charge="0.24" name="FE" type="hem-FE" />
+      <Atom charge="-0.18" name="NA" type="hem-NPH" />
+      <Atom charge="-0.18" name="NB" type="hem-NPH" />
+      <Atom charge="-0.18" name="NC" type="hem-NPH" />
+      <Atom charge="-0.18" name="ND" type="hem-NPH" />
+      <Atom charge="0.12" name="C1A" type="hem-CPA" />
+      <Atom charge="-0.06" name="C2A" type="hem-CPB" />
+      <Atom charge="-0.06" name="C3A" type="hem-CPB" />
+      <Atom charge="0.12" name="C4A" type="hem-CPA" />
+      <Atom charge="0.12" name="C1B" type="hem-CPA" />
+      <Atom charge="-0.06" name="C2B" type="hem-CPB" />
+      <Atom charge="-0.06" name="C3B" type="hem-CPB" />
+      <Atom charge="0.12" name="C4B" type="hem-CPA" />
+      <Atom charge="0.12" name="C1C" type="hem-CPA" />
+      <Atom charge="-0.06" name="C2C" type="hem-CPB" />
+      <Atom charge="-0.06" name="C3C" type="hem-CPB" />
+      <Atom charge="0.12" name="C4C" type="hem-CPA" />
+      <Atom charge="0.12" name="C1D" type="hem-CPA" />
+      <Atom charge="-0.06" name="C2D" type="hem-CPB" />
+      <Atom charge="-0.06" name="C3D" type="hem-CPB" />
+      <Atom charge="0.12" name="C4D" type="hem-CPA" />
+      <Atom charge="-0.1" name="CHA" type="hem-CPM" />
+      <Atom charge="0.1" name="HA" type="hem-HA" />
+      <Atom charge="-0.1" name="CHB" type="hem-CPM" />
+      <Atom charge="0.1" name="HB" type="hem-HA" />
+      <Atom charge="-0.1" name="CHC" type="hem-CPM" />
+      <Atom charge="0.1" name="HC" type="hem-HA" />
+      <Atom charge="-0.1" name="CHD" type="hem-CPM" />
+      <Atom charge="0.1" name="HD" type="hem-HA" />
+      <Atom charge="-0.27" name="CMA" type="hem-CT3" />
+      <Atom charge="0.09" name="HMA1" type="hem-HA3" />
+      <Atom charge="0.09" name="HMA2" type="hem-HA3" />
+      <Atom charge="0.09" name="HMA3" type="hem-HA3" />
+      <Atom charge="-0.18" name="CAA" type="hem-CT2" />
+      <Atom charge="0.09" name="HAA1" type="hem-HA2" />
+      <Atom charge="0.09" name="HAA2" type="hem-HA2" />
+      <Atom charge="-0.28" name="CBA" type="hem-CT2" />
+      <Atom charge="0.09" name="HBA1" type="hem-HA2" />
+      <Atom charge="0.09" name="HBA2" type="hem-HA2" />
+      <Atom charge="0.62" name="CGA" type="hem-CC" />
+      <Atom charge="-0.76" name="O1A" type="hem-OC" />
+      <Atom charge="-0.76" name="O2A" type="hem-OC" />
+      <Atom charge="-0.27" name="CMB" type="hem-CT3" />
+      <Atom charge="0.09" name="HMB1" type="hem-HA3" />
+      <Atom charge="0.09" name="HMB2" type="hem-HA3" />
+      <Atom charge="0.09" name="HMB3" type="hem-HA3" />
+      <Atom charge="-0.15" name="CAB" type="hem-CE1" />
+      <Atom charge="0.15" name="HAB" type="hem-HE1" />
+      <Atom charge="-0.42" name="CBB" type="hem-CE2" />
+      <Atom charge="0.21" name="HBB1" type="hem-HE2" />
+      <Atom charge="0.21" name="HBB2" type="hem-HE2" />
+      <Atom charge="-0.27" name="CMC" type="hem-CT3" />
+      <Atom charge="0.09" name="HMC1" type="hem-HA3" />
+      <Atom charge="0.09" name="HMC2" type="hem-HA3" />
+      <Atom charge="0.09" name="HMC3" type="hem-HA3" />
+      <Atom charge="-0.15" name="CAC" type="hem-CE1" />
+      <Atom charge="0.15" name="HAC" type="hem-HE1" />
+      <Atom charge="-0.42" name="CBC" type="hem-CE2" />
+      <Atom charge="0.21" name="HBC1" type="hem-HE2" />
+      <Atom charge="0.21" name="HBC2" type="hem-HE2" />
+      <Atom charge="-0.27" name="CMD" type="hem-CT3" />
+      <Atom charge="0.09" name="HMD1" type="hem-HA3" />
+      <Atom charge="0.09" name="HMD2" type="hem-HA3" />
+      <Atom charge="0.09" name="HMD3" type="hem-HA3" />
+      <Atom charge="-0.18" name="CAD" type="hem-CT2" />
+      <Atom charge="0.09" name="HAD1" type="hem-HA2" />
+      <Atom charge="0.09" name="HAD2" type="hem-HA2" />
+      <Atom charge="-0.28" name="CBD" type="hem-CT2" />
+      <Atom charge="0.09" name="HBD1" type="hem-HA2" />
+      <Atom charge="0.09" name="HBD2" type="hem-HA2" />
+      <Atom charge="0.62" name="CGD" type="hem-CC" />
+      <Atom charge="-0.76" name="O1D" type="hem-OC" />
+      <Atom charge="-0.76" name="O2D" type="hem-OC" />
+      <Bond atomName1="FE" atomName2="NA" />
+      <Bond atomName1="FE" atomName2="NB" />
+      <Bond atomName1="FE" atomName2="NC" />
+      <Bond atomName1="FE" atomName2="ND" />
+      <Bond atomName1="NA" atomName2="C1A" />
+      <Bond atomName1="C1A" atomName2="C2A" />
+      <Bond atomName1="C2A" atomName2="C3A" />
+      <Bond atomName1="C3A" atomName2="C4A" />
+      <Bond atomName1="NA" atomName2="C4A" />
+      <Bond atomName1="C2A" atomName2="CAA" />
+      <Bond atomName1="CAA" atomName2="CBA" />
+      <Bond atomName1="CBA" atomName2="CGA" />
+      <Bond atomName1="CGA" atomName2="O1A" />
+      <Bond atomName1="CGA" atomName2="O2A" />
+      <Bond atomName1="C3A" atomName2="CMA" />
+      <Bond atomName1="CHB" atomName2="C4A" />
+      <Bond atomName1="CHB" atomName2="C1B" />
+      <Bond atomName1="NB" atomName2="C1B" />
+      <Bond atomName1="C1B" atomName2="C2B" />
+      <Bond atomName1="C2B" atomName2="C3B" />
+      <Bond atomName1="C3B" atomName2="C4B" />
+      <Bond atomName1="NB" atomName2="C4B" />
+      <Bond atomName1="C2B" atomName2="CMB" />
+      <Bond atomName1="C3B" atomName2="CAB" />
+      <Bond atomName1="CAB" atomName2="CBB" />
+      <Bond atomName1="CHC" atomName2="C4B" />
+      <Bond atomName1="CHC" atomName2="C1C" />
+      <Bond atomName1="NC" atomName2="C1C" />
+      <Bond atomName1="C1C" atomName2="C2C" />
+      <Bond atomName1="C2C" atomName2="C3C" />
+      <Bond atomName1="C3C" atomName2="C4C" />
+      <Bond atomName1="NC" atomName2="C4C" />
+      <Bond atomName1="C2C" atomName2="CMC" />
+      <Bond atomName1="C3C" atomName2="CAC" />
+      <Bond atomName1="CAC" atomName2="CBC" />
+      <Bond atomName1="CHD" atomName2="C4C" />
+      <Bond atomName1="CHD" atomName2="C1D" />
+      <Bond atomName1="ND" atomName2="C1D" />
+      <Bond atomName1="C1D" atomName2="C2D" />
+      <Bond atomName1="C2D" atomName2="C3D" />
+      <Bond atomName1="C3D" atomName2="C4D" />
+      <Bond atomName1="ND" atomName2="C4D" />
+      <Bond atomName1="C2D" atomName2="CMD" />
+      <Bond atomName1="C3D" atomName2="CAD" />
+      <Bond atomName1="CAD" atomName2="CBD" />
+      <Bond atomName1="CBD" atomName2="CGD" />
+      <Bond atomName1="CGD" atomName2="O1D" />
+      <Bond atomName1="CGD" atomName2="O2D" />
+      <Bond atomName1="CHA" atomName2="C4D" />
+      <Bond atomName1="CHA" atomName2="C1A" />
+      <Bond atomName1="CHA" atomName2="HA" />
+      <Bond atomName1="CHB" atomName2="HB" />
+      <Bond atomName1="CHC" atomName2="HC" />
+      <Bond atomName1="CHD" atomName2="HD" />
+      <Bond atomName1="CAA" atomName2="HAA1" />
+      <Bond atomName1="CAA" atomName2="HAA2" />
+      <Bond atomName1="CBA" atomName2="HBA1" />
+      <Bond atomName1="CBA" atomName2="HBA2" />
+      <Bond atomName1="CMA" atomName2="HMA1" />
+      <Bond atomName1="CMA" atomName2="HMA2" />
+      <Bond atomName1="CMA" atomName2="HMA3" />
+      <Bond atomName1="CMB" atomName2="HMB1" />
+      <Bond atomName1="CMB" atomName2="HMB2" />
+      <Bond atomName1="CMB" atomName2="HMB3" />
+      <Bond atomName1="CAB" atomName2="HAB" />
+      <Bond atomName1="CBB" atomName2="HBB1" />
+      <Bond atomName1="CBB" atomName2="HBB2" />
+      <Bond atomName1="CMC" atomName2="HMC1" />
+      <Bond atomName1="CMC" atomName2="HMC2" />
+      <Bond atomName1="CMC" atomName2="HMC3" />
+      <Bond atomName1="CAC" atomName2="HAC" />
+      <Bond atomName1="CBC" atomName2="HBC1" />
+      <Bond atomName1="CBC" atomName2="HBC2" />
+      <Bond atomName1="CMD" atomName2="HMD1" />
+      <Bond atomName1="CMD" atomName2="HMD2" />
+      <Bond atomName1="CMD" atomName2="HMD3" />
+      <Bond atomName1="CAD" atomName2="HAD1" />
+      <Bond atomName1="CAD" atomName2="HAD2" />
+      <Bond atomName1="CBD" atomName2="HBD1" />
+      <Bond atomName1="CBD" atomName2="HBD2" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="368192.000" length="0.134000" type1="hem-CE1" type2="hem-CE1" />
+    <Bond k="418400.000" length="0.134200" type1="hem-CE1" type2="hem-CE2" />
+    <Bond k="305432.000" length="0.150200" type1="hem-CE1" type2="hem-CT2" />
+    <Bond k="320494.400" length="0.150400" type1="hem-CE1" type2="hem-CT3" />
+    <Bond k="426768.000" length="0.133000" type1="hem-CE2" type2="hem-CE2" />
+    <Bond k="167360.000" length="0.152200" type1="hem-CT2" type2="hem-CC" />
+    <Bond k="186188.000" length="0.153000" type1="hem-CT2" type2="hem-CT2" />
+    <Bond k="167360.000" length="0.152200" type1="hem-CT3" type2="hem-CC" />
+    <Bond k="186188.000" length="0.152800" type1="hem-CT3" type2="hem-CT2" />
+    <Bond k="186188.000" length="0.153000" type1="hem-CT3" type2="hem-CT3" />
+    <Bond k="258571.200" length="0.111100" type1="hem-HA2" type2="hem-CT2" />
+    <Bond k="269449.600" length="0.111100" type1="hem-HA3" type2="hem-CT3" />
+    <Bond k="301666.400" length="0.110000" type1="hem-HE1" type2="hem-CE1" />
+    <Bond k="305432.000" length="0.110000" type1="hem-HE2" type2="hem-CE2" />
+    <Bond k="439320.000" length="0.126000" type1="hem-OC" type2="hem-CC" />
+    <Bond k="376560.000" length="0.133000" type1="hem-OC" type2="hem-CT2" />
+    <Bond k="376560.000" length="0.133000" type1="hem-OC" type2="hem-CT3" />
+    <Bond k="376560.000" length="0.138000" type1="hem-CPB" type2="hem-CE1" />
+    <Bond k="250872.640" length="0.144320" type1="hem-CPB" type2="hem-CPA" />
+    <Bond k="285097.760" length="0.134640" type1="hem-CPB" type2="hem-CPB" />
+    <Bond k="301248.000" length="0.137160" type1="hem-CPM" type2="hem-CPA" />
+    <Bond k="192464.000" length="0.149000" type1="hem-CT2" type2="hem-CPB" />
+    <Bond k="192464.000" length="0.149000" type1="hem-CT3" type2="hem-CPB" />
+    <Bond k="0.000" length="0.338140" type1="hem-FE" type2="hem-CPM" />
+    <Bond k="307607.680" length="0.109000" type1="hem-HA" type2="hem-CPM" />
+    <Bond k="315640.960" length="0.137570" type1="hem-NPH" type2="hem-CPA" />
+    <Bond k="226103.360" length="0.195800" type1="hem-NPH" type2="hem-FE" />
+    <Bond k=" 78157.12"   length="0.185" type1="hem-FE"  type2="protein-NB"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.1554816262129970" k="401.6640" type1="hem-CE1" type2="hem-CE1" type3="hem-CT2" />
+    <Angle angle="2.1554816262129970" k="401.6640" type1="hem-CE1" type2="hem-CE1" type3="hem-CT3" />
+    <Angle angle="1.9582594207376378" k="267.7760" type1="hem-CE1" type2="hem-CT2" type3="hem-CT3" />
+    <Angle angle="2.1991148575128552" k="401.6640" type1="hem-CE2" type2="hem-CE1" type3="hem-CT2" />
+    <Angle angle="2.1851522234969005" k="393.2960" type1="hem-CE2" type2="hem-CE1" type3="hem-CT3" />
+    <Angle angle="1.8849555921538759" k="435.1360" type1="hem-CT2" type2="hem-CT2" type3="hem-CC" />
+    <Angle angle="1.8849555921538759" k="435.1360" type1="hem-CT3" type2="hem-CT2" type3="hem-CC" />
+    <Angle angle="1.9826940302655582" k="488.2728" type1="hem-CT2" type2="hem-CT2" type3="hem-CT2" />
+    <Angle angle="2.0071286397934789" k="485.3440" type1="hem-CT3" type2="hem-CT2" type3="hem-CT2" />
+    <Angle angle="1.9896753472735358" k="446.4328" type1="hem-CT3" type2="hem-CT2" type3="hem-CT3" />
+    <Angle angle="1.9111355309337910" k="276.1440" type1="hem-HA2" type2="hem-CT2" type3="hem-CC" />
+    <Angle angle="1.9460421159736774" k="376.5600" type1="hem-HA2" type2="hem-CT2" type3="hem-CE1" />
+    <Angle angle="1.9216075064457567" k="221.7520" type1="hem-HA2" type2="hem-CT2" type3="hem-CT2" />
+    <Angle angle="1.9216075064457567" k="289.5328" type1="hem-HA2" type2="hem-CT2" type3="hem-CT3" />
+    <Angle angle="1.9024088846738192" k="297.0640" type1="hem-HA2" type2="hem-CT2" type3="hem-HA2" />
+    <Angle angle="1.9111355309337910" k="276.1440" type1="hem-HA3" type2="hem-CT3" type3="hem-CC" />
+    <Angle angle="1.9460421159736774" k="351.4560" type1="hem-HA3" type2="hem-CT3" type3="hem-CE1" />
+    <Angle angle="1.9216075064457567" k="289.5328" type1="hem-HA3" type2="hem-CT3" type3="hem-CT2" />
+    <Angle angle="1.9216075064457567" k="313.8000" type1="hem-HA3" type2="hem-CT3" type3="hem-CT3" />
+    <Angle angle="1.8919369091618534" k="297.0640" type1="hem-HA3" type2="hem-CT3" type3="hem-HA3" />
+    <Angle angle="2.0856684561332237" k="435.1360" type1="hem-HE1" type2="hem-CE1" type3="hem-CE1" />
+    <Angle angle="2.0594885173533091" k="351.4560" type1="hem-HE1" type2="hem-CE1" type3="hem-CE2" />
+    <Angle angle="2.0245819323134224" k="334.7200" type1="hem-HE1" type2="hem-CE1" type3="hem-CT2" />
+    <Angle angle="2.0420352248333655" k="184.0960" type1="hem-HE1" type2="hem-CE1" type3="hem-CT3" />
+    <Angle angle="2.1031217486531673" k="376.5600" type1="hem-HE2" type2="hem-CE2" type3="hem-CE1" />
+    <Angle angle="2.1031217486531673" k="464.4240" type1="hem-HE2" type2="hem-CE2" type3="hem-CE2" />
+    <Angle angle="2.0769418098732522" k="158.9920" type1="hem-HE2" type2="hem-CE2" type3="hem-HE2" />
+    <Angle angle="2.0594885173533091" k="334.7200" type1="hem-OC" type2="hem-CC" type3="hem-CT2" />
+    <Angle angle="2.0594885173533091" k="334.7200" type1="hem-OC" type2="hem-CC" type3="hem-CT3" />
+    <Angle angle="2.1642082724729685" k="836.8000" type1="hem-OC" type2="hem-CC" type3="hem-OC" />
+    <Angle angle="2.1293016874330819" k="543.9200" type1="hem-OC" type2="hem-CT2" type3="hem-CT3" />
+    <Angle angle="2.0647245051092917" k="543.9200" type1="hem-OC" type2="hem-CT2" type3="hem-HA2" />
+    <Angle angle="2.0647245051092917" k="543.9200" type1="hem-OC" type2="hem-CT3" type3="hem-HA3" />
+    <Angle angle="2.2120302939776133" k="585.7600" type1="hem-CPA" type2="hem-CPB" type3="hem-CE1" />
+    <Angle angle="2.1837559600953051" k="788.2656" type1="hem-CPA" type2="hem-CPM" type3="hem-CPA" />
+    <Angle angle="1.8133970928221086" k="1165.6624" type1="hem-CPA" type2="hem-NPH" type3="hem-CPA" />
+    <Angle angle="2.1205750411731104" k="585.7600" type1="hem-CPB" type2="hem-CE1" type3="hem-CE2" />
+    <Angle angle="2.2122048269028127" k="585.7600" type1="hem-CPB" type2="hem-CPB" type3="hem-CE1" />
+    <Angle angle="1.8589501862991604" k="257.7344" type1="hem-CPB" type2="hem-CPB" type3="hem-CPA" />
+    <Angle angle="2.1654300029493645" k="515.4688" type1="hem-CPM" type2="hem-CPA" type3="hem-CPB" />
+    <Angle angle="2.2120302939776133" k="543.9200" type1="hem-CT2" type2="hem-CPB" type3="hem-CPA" />
+    <Angle angle="2.2122048269028127" k="543.9200" type1="hem-CT2" type2="hem-CPB" type3="hem-CPB" />
+    <Angle angle="1.9722220547535925" k="585.7600" type1="hem-CT2" type2="hem-CT2" type3="hem-CPB" />
+    <Angle angle="2.2120302939776133" k="543.9200" type1="hem-CT3" type2="hem-CPB" type3="hem-CPA" />
+    <Angle angle="2.2122048269028127" k="543.9200" type1="hem-CT3" type2="hem-CPB" type3="hem-CPB" />
+    <Angle angle="2.2348941071787394" k="804.5832" type1="hem-FE" type2="hem-NPH" type3="hem-CPA" />
+    <Angle angle="2.0497146735421405" k="106.2736" type1="hem-HA" type2="hem-CPM" type3="hem-CPA" />
+    <Angle angle="3.1415926535897931" k="0.0000" type1="hem-HA" type2="hem-CPM" type3="hem-FE" />
+    <Angle angle="1.9111355309337910" k="418.4000" type1="hem-HA2" type2="hem-CT2" type3="hem-CPB" />
+    <Angle angle="1.9111355309337910" k="418.4000" type1="hem-HA3" type2="hem-CT3" type3="hem-CPB" />
+    <Angle angle="2.0943951023931953" k="418.4000" type1="hem-HE1" type2="hem-CE1" type3="hem-CPB" />
+    <Angle angle="1.9467402476744753" k="1020.8960" type1="hem-NPH" type2="hem-CPA" type3="hem-CPB" />
+    <Angle angle="2.1710150565557464" k="736.3840" type1="hem-NPH" type2="hem-CPA" type3="hem-CPM" />
+    <Angle angle="0.7853981633974483" k="0.0000" type1="hem-NPH" type2="hem-FE" type3="hem-CPM" />
+    <Angle angle="1.5707963267948966" k="120.4155" type1="hem-NPH" type2="hem-FE" type3="hem-NPH" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="hem-FE" type2="protein-NB" type3="protein-CR" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="protein-NB" type2="hem-FE" type3="protein-CR" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="protein-NB" type2="hem-FE" type3="protein-NB" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="hem-NPH" type2="hem-FE" type3="protein-CR" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="hem-NPH" type2="hem-FE" type3="protein-NB" />
+    <Angle angle="1.5707963267948966" k="0.0000" type1="hem-FE" type2="protein-NB" type3="protein-CV" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.125520" periodicity1="3" phase1="0.0000000000000000" type1="hem-CE1" type2="hem-CE1" type3="hem-CT3" type4="hem-HA3" />
+    <Proper k1="2.092000" k2="5.439200" periodicity1="1" periodicity2="3" phase1="3.1415926535897931" phase2="3.1415926535897931" type1="hem-CE2" type2="hem-CE1" type3="hem-CT2" type4="hem-CT3" />
+    <Proper k1="0.502080" periodicity1="3" phase1="0.0000000000000000" type1="hem-CE2" type2="hem-CE1" type3="hem-CT2" type4="hem-HA2" />
+    <Proper k1="0.209200" periodicity1="3" phase1="3.1415926535897931" type1="hem-CE2" type2="hem-CE1" type3="hem-CT3" type4="hem-HA3" />
+    <Proper k1="0.418400" k2="0.627600" k3="0.418400" periodicity1="2" periodicity2="4" periodicity3="6" phase1="3.1415926535897931" phase2="0.0000000000000000" phase3="3.1415926535897931" type1="hem-CT2" type2="hem-CT2" type3="hem-CT2" type4="hem-CT2" />
+    <Proper k1="0.418400" k2="0.627600" k3="0.418400" periodicity1="2" periodicity2="4" periodicity3="6" phase1="3.1415926535897931" phase2="0.0000000000000000" phase3="3.1415926535897931" type1="hem-CT2" type2="hem-CT2" type3="hem-CT2" type4="hem-CT3" />
+    <Proper k1="21.756800" periodicity1="2" phase1="3.1415926535897931" type1="hem-CT3" type2="hem-CE1" type3="hem-CE2" type4="hem-HE2" />
+    <Proper k1="4.184000" periodicity1="2" phase1="3.1415926535897931" type1="hem-HE1" type2="hem-CE1" type3="hem-CE1" type4="hem-HE1" />
+    <Proper k1="4.184000" periodicity1="2" phase1="3.1415926535897931" type1="hem-CT3" type2="hem-CE1" type3="hem-CE1" type4="hem-HE1" />
+    <Proper k1="21.756800" periodicity1="2" phase1="3.1415926535897931" type1="hem-HE1" type2="hem-CE1" type3="hem-CE2" type4="hem-HE2" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="hem-HE1" type2="hem-CE1" type3="hem-CT2" type4="hem-HA2" />
+    <Proper k1="0.502080" periodicity1="3" phase1="0.0000000000000000" type1="hem-HE1" type2="hem-CE1" type3="hem-CT2" type4="hem-CT3" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="hem-HE1" type2="hem-CE1" type3="hem-CT3" type4="hem-HA3" />
+    <Proper k1="21.756800" periodicity1="2" phase1="3.1415926535897931" type1="hem-HE2" type2="hem-CE2" type3="hem-CE1" type4="hem-CT2" />
+    <Proper k1="0.627600" k2="35.564000" periodicity1="1" periodicity2="2" phase1="0.0000000000000000" phase2="3.1415926535897931" type1="" type2="hem-CE1" type3="hem-CE1" type4="" />
+    <Proper k1="20.501600" periodicity1="2" phase1="3.1415926535897931" type1="" type2="hem-CE2" type3="hem-CE2" type4="" />
+    <Proper k1="0.209200" periodicity1="6" phase1="3.1415926535897931" type1="" type2="hem-CT2" type3="hem-CC" type4="" />
+    <Proper k1="0.794960" periodicity1="3" phase1="0.0000000000000000" type1="" type2="hem-CT2" type3="hem-CT2" type4="" />
+    <Proper k1="0.669440" periodicity1="3" phase1="0.0000000000000000" type1="" type2="hem-CT2" type3="hem-CT3" type4="" />
+    <Proper k1="0.209200" periodicity1="6" phase1="3.1415926535897931" type1="" type2="hem-CT3" type3="hem-CC" type4="" />
+    <Proper k1="0.638060" periodicity1="3" phase1="0.0000000000000000" type1="" type2="hem-CT3" type3="hem-CT3" type4="" />
+    <Proper k1="0.794960" periodicity1="3" phase1="0.0000000000000000" type1="hem-HA2" type2="hem-CT2" type3="hem-CT2" type4="hem-HA2" />
+    <Proper k1="0.794960" periodicity1="3" phase1="0.0000000000000000" type1="hem-HA2" type2="hem-CT2" type3="hem-CT2" type4="hem-CC" />
+    <Proper k1="0.794960" periodicity1="3" phase1="0.0000000000000000" type1="hem-CT2" type2="hem-CT2" type3="hem-CT2" type4="hem-HA2" />
+    <Proper k1="0.209200" periodicity1="6" phase1="3.1415926535897931" type1="hem-HA2" type2="hem-CT2" type3="hem-CC" type4="hem-OC" />
+    <Proper k1="0.669440" periodicity1="3" phase1="0.0000000000000000" type1="hem-HA2" type2="hem-CT2" type3="hem-CT3" type4="hem-HA3" />
+    <Proper k1="0.209200" periodicity1="6" phase1="3.1415926535897931" type1="hem-CT2" type2="hem-CT2" type3="hem-CC" type4="hem-OC" />
+    <Proper k1="21.756800" periodicity1="2" phase1="3.1415926535897931" type1="hem-HE2" type2="hem-CE2" type3="hem-CE1" type4="hem-CPB" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="hem-CPA" type3="hem-CPB" type4="" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="hem-CPA" type3="hem-CPM" type4="" />
+    <Proper k1="12.552000" periodicity1="2" phase1="3.1415926535897931" type1="" type2="hem-CPB" type3="hem-CE1" type4="" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="hem-CPB" type3="hem-CPB" type4="" />
+    <Proper k1="0.000000" periodicity1="6" phase1="0.0000000000000000" type1="" type2="hem-CPB" type3="hem-CT2" type4="" />
+    <Proper k1="0.000000" periodicity1="6" phase1="0.0000000000000000" type1="" type2="hem-CPB" type3="hem-CT3" type4="" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="hem-FE" type3="hem-NPH" type4="" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="hem-NPH" type3="hem-CPA" type4="" />
+    <Proper k1="0.000000" periodicity1="6" phase1="3.1415926535897931" type1="" type2="hem-CC" type3="hem-OC" type4="" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="" type2="protein-NB" type3="hem-FE" type4="" />
+    <Improper k1="803.328" periodicity1="1" phase1="3.1415926535897931" type1="hem-CC" type2="hem-CT2" type3="hem-OC" type4="hem-OC" />
+    <Improper k1="1506.240" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPB" type2="hem-CPA" type3="hem-CPB" type4="hem-CT2" />
+    <Improper k1="1506.240" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPB" type2="hem-CPB" type3="hem-CPA" type4="hem-CT3" />
+    <Improper k1="753.120" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPB" type2="hem-CPB" type3="hem-CPA" type4="hem-CE1" />
+    <Improper k1="174.054" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPA" type2="hem-NPH" type3="hem-CPA" type4="hem-CPB" />
+    <Improper k1="339.741" periodicity1="1" phase1="3.1415926535897931" type1="hem-NPH" type2="hem-CPA" type3="hem-CPB" type4="hem-CPB" />
+    <Improper k1="153.134" periodicity1="1" phase1="3.1415926535897931" type1="hem-NPH" type2="hem-CPA" type3="hem-CPM" type4="hem-CPA" />
+    <Improper k1="246.019" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPM" type2="hem-CPA" type3="hem-CPA" type4="hem-HA" />
+    <Improper k1="273.634" periodicity1="1" phase1="3.1415926535897931" type1="hem-CPA" type2="hem-CPB" type3="hem-CPM" type4="hem-NPH" />
+    <Improper k1="1149.763" periodicity1="1" phase1="3.1415926535897931" type1="hem-NPH" type2="hem-CPA" type3="hem-CPA" type4="hem-FE" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.0920480" sigma="0.2351972615890496" type="hem-HA" />
+    <Atom epsilon="0.1297040" sigma="0.2227246795350848" type="hem-HE1" />
+    <Atom epsilon="0.1087840" sigma="0.2245064769713655" type="hem-HE2" />
+    <Atom epsilon="0.1422560" sigma="0.2387608564616110" type="hem-HA2" />
+    <Atom epsilon="0.1004160" sigma="0.2387608564616110" type="hem-HA3" />
+    <Atom epsilon="0.2343040" sigma="0.3581412846924164" type="hem-CT2" />
+    <Atom epsilon="0.3263520" sigma="0.3634866770012585" type="hem-CT3" />
+    <Atom epsilon="0.2928800" sigma="0.3563594872561358" type="hem-CC" />
+    <Atom epsilon="0.2845120" sigma="0.3723956641826618" type="hem-CE1" />
+    <Atom epsilon="0.2677760" sigma="0.3706138667463812" type="hem-CE2" />
+    <Atom epsilon="0.5020800" sigma="0.3029055641677154" type="hem-OC" />
+    <Atom epsilon="0.3765600" sigma="0.3207235385305222" type="hem-CPA" />
+    <Atom epsilon="0.3765600" sigma="0.3207235385305222" type="hem-CPB" />
+    <Atom epsilon="0.3765600" sigma="0.3207235385305222" type="hem-CPM" />
+    <Atom epsilon="0.8368000" sigma="0.3296325257119256" type="hem-NPH" />
+    <Atom epsilon="0.0000000" sigma="0.1158168333582441" type="hem-FE" />
+  </NonbondedForce>
+</ForceField>

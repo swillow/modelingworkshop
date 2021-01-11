@@ -1,0 +1,8 @@
+{
+    "fname_pdb": "dimer_wat.pdb",
+    "fname_prmtop": "dimer_wat.prmtop",
+    "fname_ff": [
+        "./data/protein.ff14SB.xml",
+        "./data/wat_opc3.xml"
+    ]
+}

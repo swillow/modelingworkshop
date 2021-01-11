@@ -1,0 +1,417 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2021-01-08</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="CC" element="C" mass="12.0100" name="n3i-CC" />
+    <Type class="CD" element="C" mass="12.0100" name="n3i-CD" />
+    <Type class="C3" element="C" mass="12.0100" name="n3i-C3" />
+    <Type class="OS" element="O" mass="16.0000" name="n3i-OS" />
+    <Type class="ND" element="N" mass="14.0100" name="n3i-ND" />
+    <Type class="C" element="C" mass="12.0100" name="n3i-C" />
+    <Type class="O" element="O" mass="16.0000" name="n3i-O" />
+    <Type class="HC" element="H" mass="1.0080" name="n3i-HC" />
+    <Type class="HA" element="H" mass="1.0080" name="n3i-HA" />
+    <Type class="N" element="N" mass="14.0100" name="n3i-N" />
+    <Type class="HN" element="H" mass="1.0080" name="n3i-HN" />
+    <Type class="H1" element="H" mass="1.0080" name="n3i-H1" />
+    <Type class="C2" element="C" mass="12.0100" name="n3i-C2" />
+    <Type class="CE" element="C" mass="12.0100" name="n3i-CE" />
+    <Type class="CA" element="C" mass="12.0100" name="n3i-CA" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="02J">
+      <Atom charge=" -0.313579" name="C4" type="n3i-CC" />
+      <Atom charge="  1.259021" name="C5" type="n3i-CD" />
+      <Atom charge=" -0.140379" name="C6" type="n3i-C3" />
+      <Atom charge=" -0.110079" name="O1" type="n3i-OS" />
+      <Atom charge=" -0.327279" name="N2" type="n3i-ND" />
+      <Atom charge="  0.263821" name="C3" type="n3i-CC" />
+      <Atom charge="  0.598621" name="C41" type="n3i-C" />
+      <Atom charge=" -0.599079" name="O42" type="n3i-O" />
+      <Atom charge="  0.068721" name="H6B" type="n3i-HC" />
+      <Atom charge="  0.068721" name="H6A" type="n3i-HC" />
+      <Atom charge="  0.068721" name="H6" type="n3i-HC" />
+      <Atom charge="  0.196021" name="H4" type="n3i-HA" />
+      <Atom charge=" -0.539879" name="N" type="n3i-N" />
+      <Atom charge="  0.037721" name="CA" type="n3i-C3" />
+      <Atom charge="  0.637121" name="C" type="n3i-C" />
+      <Atom charge=" -0.609079" name="O" type="n3i-O" />
+      <Atom charge=" -0.108079" name="CB" type="n3i-C3" />
+      <Atom charge="  0.341521" name="H3" type="n3i-HN" />
+      <Atom charge="  0.102721" name="HA" type="n3i-H1" />
+      <Atom charge="  0.055388" name="HB1" type="n3i-HC" />
+      <Atom charge="  0.055388" name="HB2" type="n3i-HC" />
+      <Atom charge="  0.055388" name="HB3" type="n3i-HC" />
+      <Atom charge=" -0.550879" name="N" type="n3i-N" />
+      <Atom charge="  0.043721" name="CA" type="n3i-C3" />
+      <Atom charge="  0.631121" name="C" type="n3i-C" />
+      <Atom charge=" -0.614079" name="O" type="n3i-O" />
+      <Atom charge=" -0.073679" name="CB" type="n3i-C3" />
+      <Atom charge=" -0.098579" name="CG1" type="n3i-C3" />
+      <Atom charge=" -0.098579" name="CG2" type="n3i-C3" />
+      <Atom charge="  0.326521" name="H" type="n3i-HN" />
+      <Atom charge="  0.103721" name="HA" type="n3i-H1" />
+      <Atom charge="  0.063721" name="HB" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG11" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG12" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG13" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG21" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG22" type="n3i-HC" />
+      <Atom charge="  0.043888" name="HG23" type="n3i-HC" />
+      <Atom charge=" -0.528879" name="N" type="n3i-N" />
+      <Atom charge="  0.028721" name="CA" type="n3i-C3" />
+      <Atom charge="  0.634121" name="C" type="n3i-C" />
+      <Atom charge=" -0.617079" name="O" type="n3i-O" />
+      <Atom charge=" -0.078379" name="CB" type="n3i-C3" />
+      <Atom charge=" -0.068679" name="CG" type="n3i-C3" />
+      <Atom charge=" -0.093579" name="CD1" type="n3i-C3" />
+      <Atom charge=" -0.093579" name="CD2" type="n3i-C3" />
+      <Atom charge="  0.320521" name="H" type="n3i-HN" />
+      <Atom charge="  0.101721" name="HA" type="n3i-H1" />
+      <Atom charge="  0.055721" name="HB2" type="n3i-HC" />
+      <Atom charge="  0.055721" name="HB3" type="n3i-HC" />
+      <Atom charge="  0.065721" name="HG" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD11" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD12" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD13" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD21" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD22" type="n3i-HC" />
+      <Atom charge="  0.036221" name="HD23" type="n3i-HC" />
+      <Atom charge="  0.118921" name="C19" type="n3i-C3" />
+      <Atom charge=" -0.098179" name="C20" type="n3i-C2" />
+      <Atom charge=" -0.198179" name="C21" type="n3i-CE" />
+      <Atom charge="  0.641321" name="C22" type="n3i-C" />
+      <Atom charge=" -0.079379" name="C25" type="n3i-C3" />
+      <Atom charge=" -0.136679" name="C26" type="n3i-C3" />
+      <Atom charge=" -0.100379" name="C27" type="n3i-C3" />
+      <Atom charge="  0.093021" name="C28" type="n3i-C3" />
+      <Atom charge=" -0.586879" name="N6" type="n3i-N" />
+      <Atom charge="  0.697521" name="C29" type="n3i-C" />
+      <Atom charge=" -0.634479" name="O8" type="n3i-O" />
+      <Atom charge=" -0.566879" name="N5" type="n3i-N" />
+      <Atom charge=" -0.539979" name="O7" type="n3i-O" />
+      <Atom charge="  0.090721" name="H9" type="n3i-HC" />
+      <Atom charge="  0.068721" name="H8" type="n3i-HC" />
+      <Atom charge="  0.068721" name="H7" type="n3i-HC" />
+      <Atom charge="  0.158021" name="H4" type="n3i-HA" />
+      <Atom charge="  0.133021" name="H2" type="n3i-HA" />
+      <Atom charge="  0.333521" name="H14" type="n3i-HN" />
+      <Atom charge="  0.040221" name="H13" type="n3i-H1" />
+      <Atom charge="  0.040221" name="H12" type="n3i-H1" />
+      <Atom charge="  0.066721" name="H11" type="n3i-HC" />
+      <Atom charge="  0.066721" name="H10" type="n3i-HC" />
+      <Atom charge="  0.113721" name="H1" type="n3i-H1" />
+      <Atom charge="  0.315521" name="H15" type="n3i-HN" />
+      <Atom charge="  0.181721" name="C" type="n3i-C3" />
+      <Atom charge=" -0.441879" name="O" type="n3i-OS" />
+      <Atom charge=" -0.107479" name="C1" type="n3i-CA" />
+      <Atom charge=" -0.135479" name="C2" type="n3i-CA" />
+      <Atom charge=" -0.117979" name="C3" type="n3i-CA" />
+      <Atom charge=" -0.135479" name="C4" type="n3i-CA" />
+      <Atom charge=" -0.107479" name="C5" type="n3i-CA" />
+      <Atom charge=" -0.124279" name="C6" type="n3i-CA" />
+      <Atom charge="  0.072721" name="HA" type="n3i-H1" />
+      <Atom charge="  0.141021" name="H5" type="n3i-HA" />
+      <Atom charge="  0.133021" name="H4" type="n3i-HA" />
+      <Atom charge="  0.132021" name="H3" type="n3i-HA" />
+      <Atom charge="  0.133021" name="H2" type="n3i-HA" />
+      <Atom charge="  0.141021" name="H1" type="n3i-HA" />
+      <Atom charge="  0.072721" name="H" type="n3i-H1" />
+      <Bond atomName1="C4" atomName2="C5" />
+      <Bond atomName1="C4" atomName2="C3" />
+      <Bond atomName1="C5" atomName2="C6" />
+      <Bond atomName1="C5" atomName2="O1" />
+      <Bond atomName1="O1" atomName2="N2" />
+      <Bond atomName1="N2" atomName2="C3" />
+      <Bond atomName1="C3" atomName2="C41" />
+      <Bond atomName1="C41" atomName2="O42" />
+      <Bond atomName1="C41" atomName2="N" />
+      <Bond atomName1="N" atomName2="CA" />
+      <Bond atomName1="CA" atomName2="C" />
+      <Bond atomName1="CA" atomName2="CB" />
+      <Bond atomName1="C" atomName2="O" />
+      <Bond atomName1="C" atomName2="N" />
+      <Bond atomName1="N" atomName2="CA" />
+      <Bond atomName1="CA" atomName2="C" />
+      <Bond atomName1="CA" atomName2="CB" />
+      <Bond atomName1="C" atomName2="O" />
+      <Bond atomName1="C" atomName2="N" />
+      <Bond atomName1="CB" atomName2="CG1" />
+      <Bond atomName1="CB" atomName2="CG2" />
+      <Bond atomName1="N" atomName2="CA" />
+      <Bond atomName1="CA" atomName2="C" />
+      <Bond atomName1="CA" atomName2="CB" />
+      <Bond atomName1="C" atomName2="O" />
+      <Bond atomName1="C" atomName2="N5" />
+      <Bond atomName1="CB" atomName2="CG" />
+      <Bond atomName1="CG" atomName2="CD1" />
+      <Bond atomName1="CG" atomName2="CD2" />
+      <Bond atomName1="C19" atomName2="C20" />
+      <Bond atomName1="C19" atomName2="C25" />
+      <Bond atomName1="C19" atomName2="N5" />
+      <Bond atomName1="C20" atomName2="C21" />
+      <Bond atomName1="C21" atomName2="C22" />
+      <Bond atomName1="C22" atomName2="O7" />
+      <Bond atomName1="C22" atomName2="O" />
+      <Bond atomName1="C25" atomName2="C26" />
+      <Bond atomName1="C26" atomName2="C27" />
+      <Bond atomName1="C26" atomName2="C29" />
+      <Bond atomName1="C27" atomName2="C28" />
+      <Bond atomName1="C28" atomName2="N6" />
+      <Bond atomName1="N6" atomName2="C29" />
+      <Bond atomName1="C29" atomName2="O8" />
+      <Bond atomName1="C" atomName2="O" />
+      <Bond atomName1="C" atomName2="C6" />
+      <Bond atomName1="C1" atomName2="C2" />
+      <Bond atomName1="C1" atomName2="C6" />
+      <Bond atomName1="C2" atomName2="C3" />
+      <Bond atomName1="C3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="C5" />
+      <Bond atomName1="C5" atomName2="C6" />
+      <Bond atomName1="C4" atomName2="H4" />
+      <Bond atomName1="C6" atomName2="H6B" />
+      <Bond atomName1="C6" atomName2="H6A" />
+      <Bond atomName1="C6" atomName2="H6" />
+      <Bond atomName1="N" atomName2="H3" />
+      <Bond atomName1="CA" atomName2="HA" />
+      <Bond atomName1="CB" atomName2="HB1" />
+      <Bond atomName1="CB" atomName2="HB2" />
+      <Bond atomName1="CB" atomName2="HB3" />
+      <Bond atomName1="N" atomName2="H" />
+      <Bond atomName1="CA" atomName2="HA" />
+      <Bond atomName1="CB" atomName2="HB" />
+      <Bond atomName1="CG1" atomName2="HG11" />
+      <Bond atomName1="CG1" atomName2="HG12" />
+      <Bond atomName1="CG1" atomName2="HG13" />
+      <Bond atomName1="CG2" atomName2="HG21" />
+      <Bond atomName1="CG2" atomName2="HG22" />
+      <Bond atomName1="CG2" atomName2="HG23" />
+      <Bond atomName1="N" atomName2="H" />
+      <Bond atomName1="CA" atomName2="HA" />
+      <Bond atomName1="CB" atomName2="HB2" />
+      <Bond atomName1="CB" atomName2="HB3" />
+      <Bond atomName1="CG" atomName2="HG" />
+      <Bond atomName1="CD1" atomName2="HD11" />
+      <Bond atomName1="CD1" atomName2="HD12" />
+      <Bond atomName1="CD1" atomName2="HD13" />
+      <Bond atomName1="CD2" atomName2="HD21" />
+      <Bond atomName1="CD2" atomName2="HD22" />
+      <Bond atomName1="CD2" atomName2="HD23" />
+      <Bond atomName1="C19" atomName2="H1" />
+      <Bond atomName1="C20" atomName2="H2" />
+      <Bond atomName1="C21" atomName2="H4" />
+      <Bond atomName1="C25" atomName2="H8" />
+      <Bond atomName1="C25" atomName2="H7" />
+      <Bond atomName1="C26" atomName2="H9" />
+      <Bond atomName1="C27" atomName2="H11" />
+      <Bond atomName1="C27" atomName2="H10" />
+      <Bond atomName1="C28" atomName2="H13" />
+      <Bond atomName1="C28" atomName2="H12" />
+      <Bond atomName1="N6" atomName2="H14" />
+      <Bond atomName1="N5" atomName2="H15" />
+      <Bond atomName1="C" atomName2="HA" />
+      <Bond atomName1="C" atomName2="H" />
+      <Bond atomName1="C1" atomName2="H1" />
+      <Bond atomName1="C2" atomName2="H2" />
+      <Bond atomName1="C3" atomName2="H3" />
+      <Bond atomName1="C4" atomName2="H4" />
+      <Bond atomName1="C5" atomName2="H5" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="348192.480000" length="0.137300" type1="n3i-CC" type2="n3i-CD" />
+    <Bond k="284679.360000" length="0.142800" type1="n3i-CC" type2="n3i-CC" />
+    <Bond k="219743.680000" length="0.150200" type1="n3i-C3" type2="n3i-CD" />
+    <Bond k="307858.720000" length="0.136200" type1="n3i-CD" type2="n3i-OS" />
+    <Bond k="154891.680000" length="0.140100" type1="n3i-ND" type2="n3i-OS" />
+    <Bond k="377145.760000" length="0.131700" type1="n3i-CC" type2="n3i-ND" />
+    <Bond k="247190.720000" length="0.146800" type1="n3i-C" type2="n3i-CC" />
+    <Bond k="546095.680000" length="0.121800" type1="n3i-C" type2="n3i-O" />
+    <Bond k="298068.160000" length="0.137900" type1="n3i-C" type2="n3i-N" />
+    <Bond k="220747.840000" length="0.146200" type1="n3i-C3" type2="n3i-N" />
+    <Bond k="203509.760000" length="0.152400" type1="n3i-C" type2="n3i-C3" />
+    <Bond k="194556.000000" length="0.153800" type1="n3i-C3" type2="n3i-C3" />
+    <Bond k="213886.080000" length="0.151000" type1="n3i-C2" type2="n3i-C3" />
+    <Bond k="385346.400000" length="0.134600" type1="n3i-C2" type2="n3i-CE" />
+    <Bond k="234638.720000" length="0.148200" type1="n3i-C" type2="n3i-CE" />
+    <Bond k="312042.720000" length="0.135800" type1="n3i-C" type2="n3i-OS" />
+    <Bond k="238320.640000" length="0.143200" type1="n3i-C3" type2="n3i-OS" />
+    <Bond k="209451.040000" length="0.151600" type1="n3i-C3" type2="n3i-CA" />
+    <Bond k="316812.480000" length="0.139800" type1="n3i-CA" type2="n3i-CA" />
+    <Bond k="334803.680000" length="0.108400" type1="n3i-CC" type2="n3i-HA" />
+    <Bond k="314553.120000" length="0.109700" type1="n3i-C3" type2="n3i-HC" />
+    <Bond k="441244.640000" length="0.101300" type1="n3i-HN" type2="n3i-N" />
+    <Bond k="314553.120000" length="0.109700" type1="n3i-C3" type2="n3i-H1" />
+    <Bond k="328192.960000" length="0.108800" type1="n3i-C2" type2="n3i-HA" />
+    <Bond k="327523.520000" length="0.108800" type1="n3i-CE" type2="n3i-HA" />
+    <Bond k="331121.760000" length="0.108600" type1="n3i-CA" type2="n3i-HA" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.084797" k="558.982400" type1="n3i-C3" type2="n3i-CD" type3="n3i-CC" />
+    <Angle angle="2.099632" k="736.384000" type1="n3i-CC" type2="n3i-CD" type3="n3i-OS" />
+    <Angle angle="1.964543" k="755.630400" type1="n3i-CC" type2="n3i-CC" type3="n3i-ND" />
+    <Angle angle="2.141345" k="549.777600" type1="n3i-C" type2="n3i-CC" type3="n3i-CC" />
+    <Angle angle="1.992992" k="588.270400" type1="n3i-CC" type2="n3i-CC" type3="n3i-CD" />
+    <Angle angle="1.891414" k="733.036800" type1="n3i-CD" type2="n3i-OS" type3="n3i-ND" />
+    <Angle angle="2.038545" k="710.443200" type1="n3i-C3" type2="n3i-CD" type3="n3i-OS" />
+    <Angle angle="1.826837" k="767.345600" type1="n3i-CC" type2="n3i-ND" type3="n3i-OS" />
+    <Angle angle="2.127208" k="713.790400" type1="n3i-C" type2="n3i-CC" type3="n3i-ND" />
+    <Angle angle="2.162987" k="725.505600" type1="n3i-CC" type2="n3i-C" type3="n3i-O" />
+    <Angle angle="1.966987" k="728.852800" type1="n3i-CC" type2="n3i-C" type3="n3i-N" />
+    <Angle angle="2.106439" k="546.430400" type1="n3i-C" type2="n3i-N" type3="n3i-C3" />
+    <Angle angle="2.147629" k="952.278400" type1="n3i-N" type2="n3i-C" type3="n3i-O" />
+    <Angle angle="1.903457" k="707.096000" type1="n3i-C" type2="n3i-C3" type3="n3i-N" />
+    <Angle angle="1.947963" k="696.217600" type1="n3i-C3" type2="n3i-C3" type3="n3i-N" />
+    <Angle angle="2.150247" k="707.932800" type1="n3i-C3" type2="n3i-C" type3="n3i-O" />
+    <Angle angle="2.010271" k="705.422400" type1="n3i-C3" type2="n3i-C" type3="n3i-N" />
+    <Angle angle="1.938014" k="546.430400" type1="n3i-C" type2="n3i-C3" type3="n3i-C3" />
+    <Angle angle="1.946217" k="543.083200" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" />
+    <Angle angle="2.149374" k="553.124800" type1="n3i-C3" type2="n3i-C2" type3="n3i-CE" />
+    <Angle angle="1.947090" k="548.104000" type1="n3i-C2" type2="n3i-C3" type3="n3i-C3" />
+    <Angle angle="1.942378" k="703.748800" type1="n3i-C2" type2="n3i-C3" type3="n3i-N" />
+    <Angle angle="2.101726" k="565.676800" type1="n3i-C" type2="n3i-CE" type3="n3i-C2" />
+    <Angle angle="2.150247" k="722.158400" type1="n3i-CE" type2="n3i-C" type3="n3i-O" />
+    <Angle angle="1.936095" k="734.710400" type1="n3i-CE" type2="n3i-C" type3="n3i-OS" />
+    <Angle angle="2.024234" k="559.819200" type1="n3i-C" type2="n3i-OS" type3="n3i-C3" />
+    <Angle angle="2.151119" k="960.646400" type1="n3i-O" type2="n3i-C" type3="n3i-OS" />
+    <Angle angle="2.107835" k="548.940800" type1="n3i-C3" type2="n3i-CA" type3="n3i-CA" />
+    <Angle angle="1.901537" k="716.300800" type1="n3i-CA" type2="n3i-C3" type3="n3i-OS" />
+    <Angle angle="2.094745" k="575.718400" type1="n3i-CA" type2="n3i-CA" type3="n3i-CA" />
+    <Angle angle="2.125114" k="410.032000" type1="n3i-CD" type2="n3i-CC" type3="n3i-HA" />
+    <Angle angle="1.928415" k="399.153600" type1="n3i-CD" type2="n3i-C3" type3="n3i-HC" />
+    <Angle angle="2.113071" k="398.316800" type1="n3i-CC" type2="n3i-CC" type3="n3i-HA" />
+    <Angle angle="2.051635" k="407.521600" type1="n3i-C" type2="n3i-N" type3="n3i-HN" />
+    <Angle angle="1.877626" k="326.352000" type1="n3i-HC" type2="n3i-C3" type3="n3i-HC" />
+    <Angle angle="1.900315" k="514.632000" type1="n3i-H1" type2="n3i-C3" type3="n3i-N" />
+    <Angle angle="2.053904" k="385.764800" type1="n3i-C3" type2="n3i-N" type3="n3i-HN" />
+    <Angle angle="1.916372" k="391.622400" type1="n3i-C3" type2="n3i-C3" type3="n3i-HC" />
+    <Angle angle="1.888796" k="397.480000" type1="n3i-C" type2="n3i-C3" type3="n3i-H1" />
+    <Angle angle="1.912184" k="392.459200" type1="n3i-C3" type2="n3i-C3" type3="n3i-H1" />
+    <Angle angle="2.018998" k="388.275200" type1="n3i-C3" type2="n3i-C2" type3="n3i-HA" />
+    <Angle angle="1.919165" k="398.316800" type1="n3i-C2" type2="n3i-C3" type3="n3i-H1" />
+    <Angle angle="2.093349" k="419.236800" type1="n3i-C2" type2="n3i-CE" type3="n3i-HA" />
+    <Angle angle="2.102250" k="418.400000" type1="n3i-CE" type2="n3i-C2" type3="n3i-HA" />
+    <Angle angle="2.032611" k="393.296000" type1="n3i-C" type2="n3i-CE" type3="n3i-HA" />
+    <Angle angle="1.898395" k="396.643200" type1="n3i-C" type2="n3i-C3" type3="n3i-HC" />
+    <Angle angle="1.892985" k="324.678400" type1="n3i-H1" type2="n3i-C3" type3="n3i-H1" />
+    <Angle angle="1.916023" k="522.163200" type1="n3i-H1" type2="n3i-C3" type3="n3i-OS" />
+    <Angle angle="2.092302" k="407.521600" type1="n3i-CA" type2="n3i-CA" type3="n3i-HA" />
+    <Angle angle="1.912184" k="397.480000" type1="n3i-CA" type2="n3i-C3" type3="n3i-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="n3i-CC" type2="n3i-CD" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CC" type3="n3i-CD" type4="n3i-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CC" type3="n3i-CD" type4="n3i-OS" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="n3i-OS" type2="n3i-CD" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CC" type3="n3i-CC" type4="n3i-ND" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-C" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CC" type3="n3i-CC" type4="n3i-C" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-N" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.0000000000000000" type1="n3i-O" type2="n3i-C" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-N" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-C" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-C3" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="3.347200" periodicity1="1" phase1="0.0000000000000000" type1="n3i-O" type2="n3i-C" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-HN" type2="n3i-N" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-H1" type2="n3i-C3" type3="n3i-C" type4="n3i-N" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-H1" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="0.334720" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="0.502080" periodicity1="3" phase1="0.0000000000000000" type1="n3i-HC" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-C2" type3="n3i-CE" type4="n3i-HA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C2" type2="n3i-C3" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-C2" type2="n3i-C3" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-CE" type2="n3i-C2" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-CE" type3="n3i-C2" type4="n3i-HA" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-OS" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C2" type4="n3i-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-N" type2="n3i-C" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="3.472720" periodicity1="1" phase1="0.0000000000000000" type1="n3i-O" type2="n3i-C" type3="n3i-C3" type4="n3i-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-N" type2="n3i-C3" type3="n3i-C2" type4="n3i-HA" />
+    <Proper k1="9.100200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-O" type2="n3i-C" type3="n3i-CE" type4="n3i-HA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-HC" type2="n3i-C3" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CE" type3="n3i-C2" type4="n3i-HA" />
+    <Proper k1="9.100200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CE" type3="n3i-C" type4="n3i-OS" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-HA" type2="n3i-C2" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-H1" type2="n3i-C3" type3="n3i-N" type4="n3i-HN" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-CA" type3="n3i-CA" type4="n3i-HA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CA" type2="n3i-CA" type3="n3i-CA" type4="n3i-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-CA" type2="n3i-CA" type3="n3i-C3" type4="n3i-H1" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CA" type3="n3i-CA" type4="n3i-HA" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CD" type3="n3i-OS" type4="n3i-ND" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CC" type3="n3i-ND" type4="n3i-OS" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CC" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CC" type3="n3i-C" type4="n3i-N" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CD" type2="n3i-CC" type3="n3i-CC" type4="n3i-ND" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CD" type2="n3i-CC" type3="n3i-CC" type4="n3i-C" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CD" type2="n3i-OS" type3="n3i-ND" type4="n3i-CC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CC" type3="n3i-CD" type4="n3i-C3" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-CD" type3="n3i-OS" type4="n3i-ND" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-CC" type3="n3i-CD" type4="n3i-OS" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-OS" type2="n3i-ND" type3="n3i-CC" type4="n3i-C" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-ND" type2="n3i-CC" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-ND" type2="n3i-CC" type3="n3i-C" type4="n3i-N" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-C" type3="n3i-N" type4="n3i-C3" />
+    <Proper k1="2.677760" periodicity1="1" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-N" type3="n3i-C3" type4="n3i-C" />
+    <Proper k1="4.267680" periodicity1="1" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-N" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-O" type2="n3i-C" type3="n3i-N" type4="n3i-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-N" type2="n3i-C3" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="0.418400" periodicity1="1" phase1="3.1415926535897931" type1="n3i-N" type2="n3i-C3" type3="n3i-C" type4="n3i-N" />
+    <Proper k1="2.092000" periodicity1="1" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C" type3="n3i-N" type4="n3i-C3" />
+    <Proper k1="3.096160" periodicity1="1" phase1="0.0000000000000000" type1="n3i-O" type2="n3i-C" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="2.970640" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-C3" type3="n3i-C" type4="n3i-N" />
+    <Proper k1="0.418400" periodicity1="3" phase1="0.0000000000000000" type1="n3i-N" type2="n3i-C3" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="0.418400" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-C3" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="0.460240" periodicity1="1" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-N" type3="n3i-C3" type4="n3i-C2" />
+    <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-C2" type3="n3i-CE" type4="n3i-C" />
+    <Proper k1="0.418400" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" type4="n3i-C" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C2" type2="n3i-C3" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="9.100200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C2" type2="n3i-CE" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="9.100200" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C2" type2="n3i-CE" type3="n3i-C" type4="n3i-OS" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-CE" type2="n3i-C2" type3="n3i-C3" type4="n3i-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-CE" type2="n3i-C2" type3="n3i-C3" type4="n3i-N" />
+    <Proper k1="11.296800" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CE" type2="n3i-C" type3="n3i-OS" type4="n3i-C3" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C" type2="n3i-OS" type3="n3i-C3" type4="n3i-CA" />
+    <Proper k1="3.096160" periodicity1="1" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="0.418400" periodicity1="3" phase1="0.0000000000000000" type1="n3i-C3" type2="n3i-C3" type3="n3i-C3" type4="n3i-N" />
+    <Proper k1="4.267680" periodicity1="1" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-C3" type3="n3i-N" type4="n3i-C" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-N" type3="n3i-C" type4="n3i-O" />
+    <Proper k1="5.857600" periodicity1="1" phase1="3.1415926535897931" type1="n3i-O" type2="n3i-C" type3="n3i-OS" type4="n3i-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-CA" type3="n3i-CA" type4="n3i-CA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="n3i-OS" type2="n3i-C3" type3="n3i-CA" type4="n3i-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CA" type2="n3i-CA" type3="n3i-CA" type4="n3i-CA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-HA" type2="n3i-CC" type3="n3i-CD" type4="n3i-CC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-C3" type3="n3i-N" type4="n3i-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-CE" type3="n3i-C2" type4="n3i-HA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-C2" type3="n3i-CE" type4="n3i-HA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CA" type2="n3i-CA" type3="n3i-CA" type4="n3i-HA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-CC" type3="n3i-CD" type4="n3i-OS" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C" type2="n3i-CC" type3="n3i-CC" type4="n3i-ND" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CC" type2="n3i-N" type3="n3i-C" type4="n3i-O" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="n3i-C3" type2="n3i-N" type3="n3i-C" type4="n3i-O" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CE" type2="n3i-O" type3="n3i-C" type4="n3i-OS" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="n3i-CA" type2="n3i-CA" type3="n3i-CA" type4="n3i-C3" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-CC" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-CD" />
+    <Atom epsilon="0.4510352" sigma="0.3397709531257257" type="n3i-C3" />
+    <Atom epsilon="0.3037584" sigma="0.3156097800335680" type="n3i-OS" />
+    <Atom epsilon="0.3937144" sigma="0.3384167870222912" type="n3i-ND" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-C" />
+    <Atom epsilon="0.6121192" sigma="0.3048120873800651" type="n3i-O" />
+    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="n3i-HC" />
+    <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="n3i-HA" />
+    <Atom epsilon="0.6845024" sigma="0.3180864782832791" type="n3i-N" />
+    <Atom epsilon="0.0418400" sigma="0.1106496207546381" type="n3i-HN" />
+    <Atom epsilon="0.0870272" sigma="0.2421997255202334" type="n3i-H1" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-C2" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-CE" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="n3i-CA" />
+  </NonbondedForce>
+</ForceField>

@@ -1,6 +1,0 @@
-source leaprc.gaff2
-mol = loadmol2 nadh.mol2
-loadamberparams nadh.frcmod
-saveamberparm mol nadh.prmtop nadh.inpcrd
-quit
-

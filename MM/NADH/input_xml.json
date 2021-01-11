@@ -1,5 +1,0 @@
-{
-    "fname_prmtop": "NADH_vac.prmtop",
-    "fname_xml": "nadh_amber.ff.xml",
-    "ff_prefix": "nadh"
-}

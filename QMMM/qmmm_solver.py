@@ -65,9 +65,18 @@ def _load_geom_from_pdb(fname):
     coords = []
     for line in l_pdb:
         if line[:6] in ['ATOM  ', 'HETATM']:
+            atnm = line[12:16].strip()
+            rsnm = line[17:20].strip()
             words = line[30:].split()
             coords.append([float(x) for x in words[0:3]])
-            species.append(words[-1])
+
+            if atnm != rsnm:
+                species.append(atnm[0])
+            elif atnm in ['CL', 'NA', 'MG', 'BE', 'LI', 'K', 'ZN']:
+                species.append(atnm)
+            else:
+                print("Sorry, add atom name", atnm)
+                sys.exit()
 
     return geomlib.Geometry(species, coords)
 

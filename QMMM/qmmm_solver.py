@@ -590,6 +590,10 @@ class QMMMSolver(object):
                     self._mm_geom.coords = mm_crds
                     self._mm_geom.write(self._geomopt["fname_mm_xyz"])
 
+            dE = ener - e_last
+            if abs(dE)/qm_natom < 1.0e-8:
+                break
+
             e_last = ener
 
             if self._l_mm:

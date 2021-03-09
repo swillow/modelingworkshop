@@ -2,10 +2,13 @@
     "theory": "qmmm",
     "job": "ener",
     "qm": {
-        "method": "scf",
+        "method": "rhf",
         "basis": "6-31g",
-        "charge": 0,
-        "fname_geom": "./QMMM/substrate_qm.xyz",
+        "charge": -1,
+        "fname_geom": "./1UK4/qm_peptide.xyz",
+        "constraints_list": [[11, 3, 500.0, 3.2]],
+        "linked_atom_list": [10],
+        "linked_atom_neigh": [11],
         "esp": true,
         "esp_opts": {
             "resp": true,
@@ -13,13 +16,18 @@
         }
     },
     "mm": {
-        "fname_prmtop": "./QMMM/dimer.prmtop",
-        "fname_geom": "./QMMM/dimer.pdb"
+	"Platform": "OpenCL",
+        "fname_prmtop": "./1UK4/1uk4_hip41_mm.prmtop",
+        "fname_geom": "./1UK4/1uk4_hip41_mm.pdb",
+        "qmmm_constraints_list": [],
+        "linked_atom_list": [2215],
+        "linked_atom_list2": {"2215": [2214, 2216, 2219] },
+        "linked_atom_list3": {"2215": [2218, 2217] }
     },
     "geomopt": {
-        "fname_gopt_xyz": "./QMMM/gopt.xyz",
-        "fname_gopt_log": "./QMMM/gopt.log",
-        "fname_qm_xyz": "./QMMM/qm_optimized.xyz",
-        "fname_mm_xyz": "./QMMM/mm_optimized.xyz"
+        "fname_gopt_xyz": "./1UK4/gopt.xyz",
+        "fname_gopt_log": "./1UK4/gopt.log",
+        "fname_qm_xyz": "./1UK4/qm_optimized.xyz",
+        "fname_mm_xyz": "./1UK4/mm_optimized.xyz"
     }
 }

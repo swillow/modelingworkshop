@@ -18,7 +18,7 @@ bohr2nm = BOHR/10.0
 bohr2ang = BOHR
 
 au2kcal_mol = HARTREE2J*AVOGADRO/4184.0
-au2kJ_mol = HARTREE2J*AVOGADRO
+au2kJ_mol = HARTREE2J*AVOGADRO/1000.0
 kcal_mol2au = 1.0/au2kcal_mol
 kJ_mol2au = 1.0/au2kJ_mol
 
@@ -30,11 +30,16 @@ _nonbond_list["N"] = {"epsilon": 0.71128*kJ_mol2au, "sigma": 0.325*nm2bohr}
 _nonbond_list["O"] = {"epsilon": 0.87864*kJ_mol2au, "sigma": 0.296*nm2bohr}
 _nonbond_list["S"] = {"epsilon": 1.046*kJ_mol2au, "sigma": 0.35636*nm2bohr}
 
+_r_CC = 1.526*ang2bohr
+_k_CC = 0.5*259407.99999999994*kJ_mol2au/nm2bohr**2
+_r_CCC = np.arccos(-0.5)
+_k_CCC = 0.5*669.44*kJ_mol2au
+
 
 def _gradient_on_mm_particles(mol, mm_mol, dm):
     # The interaction between QM atoms and MM particles
     # \sum_K d/dR (1/|r_K-R|) = \sum_K (r_K-R)/|r_K-R|^3
-    #dm = mf_qmmm.make_rdm1()
+    # dm = mf_qmmm.make_rdm1()
     qm_coords = mol.atom_coords()
     qm_charges = mol.atom_charges()
     coords = mm_mol.atom_coords()
@@ -48,8 +53,8 @@ def _gradient_on_mm_particles(mol, mm_mol, dm):
     # d/dR <i| (1/|r-R|) |j> = <i| d/dR (1/|r-R|) |j> = <i| -d/dr (1/|r-R|) |j>
     #   = <d/dr i| (1/|r-R|) |j> + <i| (1/|r-R|) |d/dr j>
     for i, q in enumerate(charges):
-        with mf_qmmm.mol.with_rinv_origin(coords[i]):
-            v = mf_qmmm.mol.intor('int1e_iprinv')
+        with mol.with_rinv_origin(coords[i]):
+            v = mol.intor('int1e_iprinv')
         f = (np.einsum('ij,xji->x', dm, v) +
              np.einsum('ij,xij->x', dm, v.conj())) * -q
         g[i] += f
@@ -113,6 +118,43 @@ def _geom_store(geom, cycle, fname):
     fout.close()
 
 
+def _bond_pot_grad(pos_i, pos_j):
+    dij = pos_i - pos_j
+    rij = np.sqrt(np.einsum('i,i', dij, dij))
+    delta = rij - _r_CC
+    enr = _k_CC * delta*delta
+    dedr = 2.0*_k_CC*delta
+    de = dedr/rij
+    gij = de*dij
+
+    return enr, gij
+
+
+def _angle_pot_grad(pos_i, pos_j, pos_k):
+    dij = pos_i - pos_j
+    dkj = pos_k - pos_j
+    dpp = np.cross(dkj, dij)
+
+    rij = np.sqrt(np.einsum('i,i', dij, dij))
+    rkj = np.sqrt(np.einsum('i,i', dkj, dkj))
+    rpp = np.sqrt(np.einsum('i,i', dpp, dpp))
+
+    cs = np.einsum('i,i', dij, dkj)/(rij*rkj)
+    cs = min(1.0, max(-1.0, cs))
+    theta = np.arccos(cs)
+    delta = theta - _r_CCC
+
+    enr = _k_CCC * delta*delta
+    dedt = 2.0*_k_CCC * delta
+    termi = -dedt/(rij*rij*rpp)
+    termk = dedt/(rkj*rkj*rpp)
+
+    gi = termi*np.cross(dij, dpp)
+    gk = termk*np.cross(dkj, dpp)
+
+    return enr, gi, -(gi+gk), gk
+
+
 def _pyscf_mol_build(qm_atm_list, basis_name, charge):
     """
     Generate the atom list in the QM region (pyscf.gto.Mole)
@@ -172,7 +214,7 @@ def _pyscf_qm(atnm_list, qm_crds, qm_basis, qm_chg_tot,
 
 
 def _pyscf_qmmm(atnm_list, qm_crds, qm_basis, qm_chg_tot,
-                mm_crds, mm_chg, l_mp2):
+                mm_crds, mm_chg, l_mp2=False, l_esp=False, esp_opts={}):
 
     atm_list = []
     for ia, xyz in enumerate(qm_crds):
@@ -183,17 +225,21 @@ def _pyscf_qmmm(atnm_list, qm_crds, qm_basis, qm_chg_tot,
 
     if l_mp2:
         postmf = mp.MP2(mf).run()
-        ener_QM = postmf.e_tot
+        ener_QMMM = postmf.e_tot
         grds_QM = postmf.Gradients().kernel()
         dm = make_rdm1_with_orbital_response(postmf)
         grds_MM = _gradient_on_mm_particles(mf.mol, mf.mm_mol, dm)
     else:
-        ener_QM = mf.e_tot
+        ener_QMMM = mf.e_tot
         grds_QM = mf.Gradients().kernel()
         dm = mf.make_rdm1()
         grds_MM = _gradient_on_mm_particles(mf.mol, mf.mm_mol, dm)
 
-    return ener_QMMM, grds_QM, grds_MM
+    if l_esp:
+        esp_chg = esp_atomic_charges(qm_mol, dm, esp_opts)
+        return ener_QMMM, grds_QM, grds_MM, esp_chg
+    else:
+        return ener_QMMM, grds_QM, grds_MM
 
 
 def _openmm_energrads(simulation, mm_xyz):
@@ -227,7 +273,7 @@ class QMMMSolver(object):
         elif theory == "qmmm":
             self._l_qm = True
             self._l_mm = True
-        elif theory == "qm-pol":
+        elif theory == "qmmm-pol":
             self._l_qmpol = True
             self._l_mm = True
         elif theory == "mm":
@@ -277,9 +323,12 @@ class QMMMSolver(object):
             self._l_esp = qm_opts["esp"]
             self._esp_opts = qm_opts["esp_opts"]
 
-        self._qm_fixed_atoms = []
-        if "fixed_atom_list" in qm_opts:
-            self._qm_fixed_atoms = qm_opts["fixed_atom_list"]
+        self._qm_linked_atoms = []
+        self._qm_neigh_atoms = []
+        if "linked_atom_list" in qm_opts:
+            self._qm_linked_atoms = qm_opts["linked_atom_list"]
+            if "linked_atom_neigh" in qm_opts:
+                self._qm_neigh_atoms = qm_opts["linked_atom_neigh"]
 
         self._qm_chg_tot = 0
         if "charge" in qm_opts:
@@ -315,10 +364,6 @@ class QMMMSolver(object):
         if "fname_geom" in mm_opts:
             self._mm_geom = _load_geom(mm_opts["fname_geom"])
 
-        self._mm_fixed_atoms = []
-        if "fixed_atoms" in mm_opts:
-            self._mm_fixed_atoms = mm_opts["fixed_atoms"]
-
         self._mm_prm = None
         if "fname_prmtop" in mm_opts:
             self._mm_prm = app.AmberPrmtopFile(mm_opts["fname_prmtop"])
@@ -327,15 +372,50 @@ class QMMMSolver(object):
             sys.exit()
 
         self._mm_chg = self._mm_prm._prmtop.getCharges()
-
         self._mm_natom = self._mm_prm._prmtop.getNumAtoms()
-
         self._mm_nonbond = np.array(self._mm_prm._prmtop.getNonbondTerms())
 
+        self._mm_linked_atoms = []
+        self._mm_linked_atom2 = {}
+
+        if "linked_atom_list" in mm_opts:
+            self._mm_linked_atoms = mm_opts["linked_atom_list"]
+
+            for ia in self._mm_linked_atoms:
+                self._mm_chg[ia-1] = 0.0
+                self._mm_nonbond[ia-1, 1] = 0.0
+
+            if "linked_atom_list2" in mm_opts:
+
+                lnk2 = mm_opts["linked_atom_list2"]
+                self._mm_linked_atom2 = lnk2
+
+                for ia in self._mm_linked_atoms:
+                    for ja in lnk2[str(ia)]:
+                        self._mm_chg[ja-1] = 0.0
+                        self._mm_nonbond[ja-1, 1] = 0.0
+
+            if "linked_atom_list3" in mm_opts:
+                lnk3 = mm_opts["linked_atom_list3"]
+                for ia in self._mm_linked_atoms:
+                    for ja in lnk3[str(ia)]:
+                        self._mm_chg[ja-1] = 0.0
+                        self._mm_nonbond[ja-1, 1] = 0.0
+
+        self._qmmm_constraints = []
+        if "qmmm_constraints_list" in mm_opts:
+            if len(mm_opts["qmmm_constraints_list"]) != 0:
+
+                # Unit Conversion
+                for ia, ja, kij0, rij0 in mm_opts["qmmm_constraints_list"]:
+                    kij = kij0*kcal_mol2au/(ang2bohr*ang2bohr)
+                    rij = rij0*ang2bohr
+                    self._qmmm_constraints.append([ia, ja, kij, rij])
+
         # Unit Conversion
-        self._mm_nonbond[0, :] *= nm2bohr  # rmin_2 (nm) -> Bohr
+        self._mm_nonbond[:, 0] *= nm2bohr  # rmin_2 (nm) -> Bohr
         # eps (kcal/mol) ->Hartree
-        self._mm_nonbond[1, :] *= kJ_mol2au
+        self._mm_nonbond[:, 1] *= kJ_mol2au
 
         mm_sys = self._mm_prm.createSystem(nonbondedMethod=app.NoCutoff,
                                            constraints=app.HBonds,
@@ -345,18 +425,117 @@ class QMMMSolver(object):
                                             1.0/unit.picoseconds,
                                             time_step*unit.femtoseconds)
         platform = omm.Platform.getPlatformByName('Reference')
+        properties = {}
+        if "platform" in mm_opts:
+            platform = omm.Platform.getPlatformByName(mm_opts["platform"])
+            if mm_opts["platform"] == 'OpenCL':
+                properties = {'OpenCLPrecision': 'mixed'}
+            if mm_opts["platform"] == 'CUDA':
+                properties = {'CudaPrecision': 'mixed'}
+
         self._mm_sim = app.Simulation(self._mm_prm.topology,
                                       mm_sys,
                                       integrator,
-                                      platform)
+                                      platform, properties)
+
+    def qmmm_Coul_vdw(self, qm_crds, mm_crds, esp_chg=None):
+
+        grds_QM = np.zeros(qm_crds.shape, dtype=np.float)
+        grds_MM = np.zeros(mm_crds.shape, dtype=np.float)
+        if esp_chg is None:
+            esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
+
+        ener_qmmm = 0.0
+
+        for iatom in range(self._qm_natom):
+            ri = qm_crds[iatom]
+            rmin_2_i, eps_i = self._qm_nonbond[iatom]
+            q_i = esp_chg[iatom]
+
+            for jatom in range(self._mm_natom):
+                rj = mm_crds[jatom]
+                rmin_2_j, eps_j = self._mm_nonbond[jatom]
+                q_j = self._mm_chg[jatom]
+
+                rmin = rmin_2_i + rmin_2_j
+                eps = np.sqrt(eps_i * eps_j)
+
+                dij = ri - rj
+                rij2 = np.einsum('i,i', dij, dij)
+                rij = np.sqrt(rij2)
+
+                # Coulomb
+                enqq = q_i*q_j/rij
+                deqq = -enqq/rij
+
+                # VDW
+                rtmp = rmin/rij
+                rtmp6 = rtmp**6
+                enlj = eps*rtmp6*(rtmp6 - 2.0)
+                delj = eps*rtmp6*(rtmp6-1.0)*(-12.0/rij)
+
+                ener_qmmm += (enlj+enqq)
+
+                gij = (delj+deqq)*dij/rij
+
+                grds_QM[iatom] += gij
+                grds_MM[jatom] -= gij
+
+        nqm_linked = len(self._qm_linked_atoms)
+        for il in range(nqm_linked):
+            ia = self._qm_linked_atoms[il] - 1
+            ja = self._mm_linked_atoms[il] - 1
+
+            enr_bnd, gij = _bond_pot_grad(qm_crds[ia], mm_crds[ja])
+
+            ener_qmmm += enr_bnd
+            grds_QM[ia] += gij
+            grds_MM[ja] -= gij
+
+            # angle
+            for km2 in self._mm_linked_atom2[str(ja+1)]:
+                ka = km2 - 1
+                enr_ang, gi, gj, gk = _angle_pot_grad(
+                    qm_crds[ia], mm_crds[ja], mm_crds[ka])
+
+                ener_qmmm += enr_ang
+
+                grds_QM[ia] += gi
+                grds_MM[ja] += gj
+                grds_MM[ka] += gk
+
+            # angle (QM(ka)-QM(ia)-MM(ja))
+            ka = self._qm_neigh_atoms[il] - 1
+            enr_ang, gk, gi, gj = _angle_pot_grad(
+                qm_crds[ka], qm_crds[ia], mm_crds[ja])
+
+            ener_qmmm += enr_ang
+
+            grds_QM[ia] += gi
+            grds_MM[ja] += gj
+            grds_QM[ka] += gk
+
+        return ener_qmmm, grds_QM, grds_MM
 
     def send(self, qm_pos, mm_pos=None):
+        """ Calculate the QM or QM/MM potential energy and gradients
+
+        Args:
+            qm_pos [geomlib.Geometry]: Coordinates (in A) of the QM region.
+            mm_pos [geomlib.Geometry]: Coordinates (in A) of the MM region. Defaults to None.
+
+        Returns:
+            Energy values : in Hartree
+            Gradient values : in Hartree/A (not Hartree/Bohr)
+        """
 
         ener_QM = 0.0
         ener_MM = 0.0
 
         ener_const = 0.0
         ener_nbond = 0.0
+        ener_bnd = 0.0
+        ener_ang = 0.0
 
         if self._l_mm:
             # A -> nm (default length unit in OpenMM is nm)
@@ -368,10 +547,12 @@ class QMMMSolver(object):
 
         # xyz in Bohr
         qm_crds = qm_pos*ang2bohr
+        esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
         if self._l_qm:
 
             # QM
-            esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
+            grds_QM = np.zeros(qm_crds.shape, dtype=np.float)
+
             if self._l_esp:
                 ener_QM, grds_QM, esp_chg = \
                     _pyscf_qm(self._qm_atnm, qm_crds,
@@ -383,85 +564,43 @@ class QMMMSolver(object):
                               self._qm_basis, self._qm_chg_tot, self._l_mp2)
 
             if self._l_mm:
+                ###
                 mm_crds = mm_pos*ang2bohr
-                ener_nbond = 0.0
+                ener_qmmm, grds_qmmm_QM, grds_qmmm_MM = \
+                    self.qmmm_Coul_vdw(qm_crds, mm_crds, esp_chg)
+                grds_QM += grds_qmmm_QM
+                grds_MM += grds_qmmm_MM
 
-                for iatom in range(self._qm_natom):
-                    ri = qm_crds[iatom]
-
-                    rmin_2_i, eps_i = self._qm_nonbond[iatom]
-                    q_i = esp_chg[iatom]
-
-                    for jatom in range(self._mm_natom):
-                        rj = mm_crds[jatom]
-                        q_j = self._mm_chg[jatom]
-
-                        rmin_2_j, eps_j = self._mm_nonbond[jatom]
-
-                        rmin = rmin_2_i + rmin_2_j
-                        eps = np.sqrt(eps_i * eps_j)
-
-                        dij = ri - rj
-
-                        rij2 = np.einsum('i,i', dij, dij)
-                        rij = np.sqrt(rij2)
-
-                        # Coulomb
-                        enqq = q_i*q_j/rij
-                        deqq = -enqq/rij
-
-                        # VDW
-                        rtmp = rmin/rij
-                        rtmp6 = rtmp**6
-                        enlj = eps*rtmp6*(rtmp6 - 2.0)
-                        delj = eps*rtmp6*(rtmp6-1.0)*(-12.0/rij)
-
-                        ener_nbond += (enlj+enqq)
-
-                        gij = (delj+deqq)*dij/rij
-
-                        grds_QM[iatom] += gij
-                        grds_MM[iatom] -= gij
+                del grds_qmmm_QM
+                del grds_qmmm_MM
 
         elif self._l_qmpol:
             mm_crds = mm_pos*ang2bohr
-            ener_QM, grds_QM, grds_QMM = \
-                _pyscf_qmmm(self._qm_atnm, qm_crds,
-                            self._qm_basis, self._qm_chg_tot,
-                            mm_crds, self._mm_chg, self._l_mp2)
+            if self._l_esp:
+                ener_QM, grds_QM, grds_qmmm_Coul, esp_chg = \
+                    _pyscf_qmmm(self._qm_atnm, qm_crds,
+                                self._qm_basis, self._qm_chg_tot,
+                                mm_crds, self._mm_chg, self._l_mp2,
+                                self._l_esp, self._esp_opts)
+            else:
+                ener_QM, grds_QM, grds_qmmm_Coul = \
+                    _pyscf_qmmm(self._qm_atnm, qm_crds,
+                                self._qm_basis, self._qm_chg_tot,
+                                mm_crds, self._mm_chg, self._l_mp2)
 
-            grds_MM += grds_QMM
+            grds_MM += grds_qmmm_Coul
+            del grds_qmmm_Coul
 
-            ener_nbond = 0.0
+            if self._l_mm:
+                # Here, we don't estimate Coulomb interaction between QM and MM regions.
+                ener_qmmm, grds_qmmm_QM, grds_qmmm_MM = \
+                    self.qmmm_Coul_vdw(qm_crds, mm_crds)
 
-            for iatom in range(self._qm_natom):
-                ri = qm_crds[iatom]
-                rmin_2_i, eps_i = self._qm_nonbond[iatom]
+                grds_QM += grds_qmmm_QM
+                grds_MM += grds_qmmm_MM
 
-                for jatom in range(self._mm_natom):
-                    rj = mm_crds[jatom]
-                    rmin_2_j, eps_j = self._mm_nonbond[jatom]
-
-                    rmin = rmin_2_i + rmin_2_j
-                    eps = np.sqrt(eps_i * eps_j)
-
-                    dij = ri - rj
-
-                    rij2 = np.einsum('i,i', dij, dij)
-                    rij = np.sqrt(rij2)
-
-                    # VDW
-                    rtmp = rmin/rij
-                    rtmp6 = rtmp**6
-                    enlj = eps*rtmp6*(rtmp6 - 2.0)
-                    delj = eps*rtmp6*(rtmp6-1.0)*(-12.0/rij)
-
-                    ener_nbond += enlj
-
-                    gij = delj*dij/rij
-
-                    grds_QM[iatom] += gij
-                    grds_MM[iatom] -= gij
+                del grds_qmmm_QM
+                del grds_qmmm_MM
 
         # Constraint the distance between two QM atoms.
         ener_const = 0.0
@@ -473,22 +612,25 @@ class QMMMSolver(object):
             grds_QM[ia-1] += kij0*(rij-rij0)*pij/rij
             grds_QM[ja-1] -= kij0*(rij-rij0)*pij/rij
 
-        # Gradients of fixed atoms are zero
-        for atm_id in self._qm_fixed_atoms:
-            grds_QM[atm_id-1] = [0.0, 0.0, 0.0]
+        # Constraint the distance between QM and MM atoms
+        for ia, ja, kij0, rij0 in self._qmmm_constraints:
+            pij = qm_crds[ia-1] - mm_crds[ja-1]
+            rij = np.sqrt(np.einsum('i,i', pij, pij))
+            penalty = 0.5*kij0*(rij - rij0)**2
+            ener_const += penalty
+            grds_QM[ia-1] += kij0*(rij-rij0)*pij/rij
+            grds_MM[ja-1] -= kij0*(rij-rij0)*pij/rij
 
         # Since the length unit in GeomOpt is A (angstrom),
         # Length unit is converted into A
         grds_QM /= bohr2ang
 
         if self._l_mm:
-            for atm_id in self._mm_fixed_atoms:
-                grds_MM[atm_id-1] = [0.0, 0.0, 0.0]
-
             grds_MM /= bohr2ang
 
         if self._l_mm:
-            return ener_QM, ener_const, grds_QM, ener_nbond, ener_MM, grds_MM, esp_chg
+            return ener_QM, ener_const, grds_QM, ener_qmmm, \
+                ener_MM, grds_MM, esp_chg
         else:
             return ener_QM, ener_const, grds_QM, esp_chg
 
@@ -503,48 +645,47 @@ class QMMMSolver(object):
         optimizer = Berny(self._qm_geom)
 
         t1, w1 = t0, w0
+
         e_last = 0.0
+        qm_grd_norm_last = 0.0
+
         crds_old = self._qm_geom.coords
         if self._l_mm:
             mm_crds = self._mm_geom.coords
 
         def step_func(x):
-            if x < -0.1:
-                x = -0.1
-            elif x > 0.1:
-                x = 0.1
+            if x < -0.5:
+                x = -0.5
+            elif x > 0.5:
+                x = 0.5
             return x
 
         for cycle, qm_geom in enumerate(optimizer):
 
             # Some QM atoms are fixed
             crds_new = qm_geom.coords
-            for atm_id in self._qm_fixed_atoms:
-                crds_new[atm_id-1] = crds_old[atm_id-1]
 
             dx = crds_new - crds_old
 
             if self._l_mm:
                 # Some MM atoms are fixed
-                for atm_id in self._mm_fixed_atoms:
-                    mm_crds[atm_id-1] = self._mm_geom.coords[atm_id-1]
 
-                ener_QM, ener_const, grds_QM, ener_nbond, ener_MM, grds_MM, esp_chg = \
+                ener_QM, ener_const, grds_QM, ener_qmmm, ener_MM, grds_MM, esp_chg = \
                     self.send(crds_new, mm_crds)
-                ener = ener_QM+ener_const+ener_nbond+ener_MM
-
+                ener = ener_QM+ener_const+ener_qmmm+ener_MM
+                qm_grd_norm = np.linalg.norm(grds_QM)
                 grds_MM = np.array(
                     [[step_func(x), step_func(y), step_func(z)] for x, y, z in grds_MM])
 
                 print(' %5d' % qm_natom, file=fout_xyz)
                 print('cycle %d: E = %.12g %.8g %.4g %.6g  %.6g' %
                       (cycle+1, ener, ener_QM, ener_const,
-                       ener_nbond, ener_MM),
+                       ener_qmmm, ener_MM),
                       file=fout_xyz)
                 print('cycle %d: E = %.12g %.8g %.4g %.6g  %.6g dE = %g  norm(grad) = %g' %
                       (cycle+1, ener, ener_QM, ener_const,
-                       ener_nbond, ener_MM, ener - e_last,
-                       np.linalg.norm(grds_QM)),
+                       ener_qmmm, ener_MM, ener - e_last,
+                       qm_grd_norm),
                       file=fout_log)
                 for i in range(qm_natom):
                     print('%4s %10.6f %10.6f %10.6f' %
@@ -561,6 +702,7 @@ class QMMMSolver(object):
                 ener_QM, ener_const, grds_QM, esp_chg = \
                     self.send(crds_new)
                 ener = ener_QM+ener_const
+                qm_grd_norm = np.linalg.norm(grds_QM)
 
                 print(' %5d' % qm_natom, file=fout_xyz)
                 print('cycle %d: E = %.12g %.8g %.4g' %
@@ -568,7 +710,7 @@ class QMMMSolver(object):
                       file=fout_xyz)
                 print('cycle %d: E = %.12g %.8g %.4g dE = %g  norm(grad) = %g' %
                       (cycle+1, ener, ener_QM, ener_const, ener - e_last,
-                       np.linalg.norm(grds_QM)),
+                       qm_grd_norm),
                       file=fout_log)
                 for i in range(qm_natom):
                     print('%4s %10.6f %10.6f %10.6f' %
@@ -594,8 +736,14 @@ class QMMMSolver(object):
             if abs(dE)/qm_natom < 1.0e-8:
                 break
 
-            e_last = ener
+            dG = qm_grd_norm - qm_grd_norm_last
+            if abs(dG)/qm_natom < 1.0e-8:
+                break
 
+            e_last = ener
+            qm_grd_norm_last = qm_grd_norm
+
+            # steepest decent method is used for the MM coordinates
             if self._l_mm:
                 mm_crds -= 0.01*grds_MM
             optimizer.send((ener, grds_QM))
@@ -619,19 +767,23 @@ class QMMMSolver(object):
         if self._job in ["geomopt", "opt", "gopt"]:
             self.optimize()
         elif self._job in ["ener", "grad", "energrad"]:
+            print('ENER Start')
             qm_crds = self._qm_geom.coords
             if self._l_mm:
                 mm_crds = self._mm_geom.coords
-                ener_QM, ener_const, grds_QM, ener_nbond, ener_MM, grds_MM, esp_chg = \
+                ener_QM, ener_const, grds_QM, ener_qmmm, ener_MM, grds_MM, esp_chg = \
                     self.send(qm_crds, mm_crds)
             else:
                 ener_QM, ener_const, grds_QM, esp_chg = self.send(qm_crds)
-                print('E(QM)[Hartree] = %.12g  E(const) = %.8g' %
-                      (ener_QM, ener_const))
-                print('Grads[Hartree/A]:')
-                for i in range(self._qm_natom):
-                    print('%4s %10.6f %10.6f %10.6f' %
-                          (self._qm_atnm[i],
-                           grds_QM[i, 0], grds_QM[i, 1], grds_QM[i, 2]))
-                if self._l_esp:
-                    print('(R)ESP', esp_chg)
+
+            print('E(QM)[Hartree] = %.12g  E(const) = %.8g' %
+                  (ener_QM, ener_const))
+            print('Grads[Hartree/A]:')
+            for i in range(self._qm_natom):
+                print('%4s %10.6f %10.6f %10.6f' %
+                      (self._qm_atnm[i],
+                       grds_QM[i, 0], grds_QM[i, 1], grds_QM[i, 2]))
+            if self._l_esp:
+                print('(R)ESP', esp_chg)
+
+

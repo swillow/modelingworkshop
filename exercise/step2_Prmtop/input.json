@@ -1,0 +1,12 @@
+{
+    "fname_pdb": "../TEV/protein.pdb",
+    "fname_prmtop": "../TEV/protein.prmtop",
+    "qm_residues": [
+        "CYS151",
+        "HID46"
+    ],
+    "fname_ff": [
+        "/home/willow/Workshop/pdb2amber-master/data/protein.ff14SB.xml",
+        "/home/willow/Workshop/pdb2amber-master/data/qm_prt.xml"
+    ]
+}

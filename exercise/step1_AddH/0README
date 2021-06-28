@@ -1,0 +1,6 @@
+* Add H atoms to a protein pdb file using 'pdb2pqr30'
+* (installation: pip install pdb2pqr)
+* command:
+pdb2pqr30 --ff AMBER --with-ph=7 --nodebump --ffout=AMBER ../TEV/1lvm_A.pdb ../TEV/1lvm_A_H.pqr
+* convert a pqr file to a pdb file as follows:
+python pqr2pdb.py -i ../TEV/1lvm_A_H.pqr -o ../TEV/protein.pdb

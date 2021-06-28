@@ -1,0 +1,7 @@
+step1_AddH : add hydrogen atoms to a protein (using pdb2pqr)
+step2_Prmtop : generate an amber prmtop file for QM/MM system (using pdb2amber.py)
+step3_QMMM_Ener : calculate the potential energy and gradients of the QM/MM system (using qmmm_pol.py)
+step4_QMMM_Min : minimze the initial QM/MM system (using qmmm_pol.py)
+step5_QMMM_Rxn1 : proton transfer from CYS(-SH) to HID (NE2) 
+step6_QMMM_Rxn2 : nucleopilic attack of CYS (-S^-) to the carbonyl carbon ( C(=O)-NH- ).
+

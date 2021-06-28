@@ -1,0 +1,2 @@
+* minimze the initial QM/MM system
+$ python ../../QMMM/qmmm_pol.py -i input.json

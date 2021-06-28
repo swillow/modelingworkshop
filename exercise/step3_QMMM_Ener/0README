@@ -1,0 +1,2 @@
+* calculate the potential energy and gradients
+$ python ../../QMMM/qmmm_pol.py -i input.json

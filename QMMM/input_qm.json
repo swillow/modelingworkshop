@@ -1,13 +1,17 @@
 {
     "theory": "qm",
     "job": "ener",
+    "geom": {
+        "ligand": "./Covid/qm_cvd.pdb",
+        "qm_residues": {
+            "LIG1": 0,
+        },
+        "constraints": [
+        ]
+    },
     "qm": {
         "method": "mp2",
         "basis": "aug-cc-pVDZ",
-        "charge": 0,
-        "fname_geom": "./Nonbond/wat2_iconf3.xyz",
-        "fixed_atom_list": [],
-        "constraints_list": [],
         "esp": true,
         "esp_opts": {
             "resp": true,
@@ -15,9 +19,9 @@
         }
     },
     "geomopt": {
-        "fname_gopt_xyz": "./Bond/gopt.xyz",
-        "fname_gopt_log": "./Bond/gopt.log",
-        "fname_qm_xyz": "./Bond/qm_optimized.xyz",
-        "fname_mm_xyz": "./Bond/mm_optimized.xyz"
+        "fname_gopt_xyz": "./Covid/gopt.xyz",
+        "fname_gopt_log": "./Covid/gopt.log",
+        "fname_lig_pdb": "./Covid/ligand_optimized.pdb",
+        "fname_prt_pdb": "./Covid/protein_optimized.pdb"
     }
 }

@@ -251,7 +251,7 @@ class QMMMPol (object):
         enr_vdw = 0.0
         #enr_coul = 0.0
 
-        for iat, atmId in self._qm2mm_index:
+        for iat, atmId in enumerate(self._qm2mm_index):
             resId, atomName = atmId.split(':')
             
             if resId not in ['LIG1'] and atomName in ['CA', 'CB']:

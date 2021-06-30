@@ -246,7 +246,7 @@ class QMMMSolver(object):
         enr_coul = 0.0
 
         #for iatom in range(natom_qm):
-        for iat, atmId in self._qm2mm_index:
+        for iat, atmId in enumerate (self._qm2mm_index):
             resId, atomName = atmId.split(':')
             
             if resId not in ['LIG1'] and atomName in ['CA', 'CB']:

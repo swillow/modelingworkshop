@@ -236,7 +236,7 @@ class QMMMSolver(object):
 
         grds_qm = np.zeros(qm_crds.shape, dtype=np.float)
         grds_prt = np.zeros(prt_crds.shape, dtype=np.float)
-        natom_qm = qm_crds.shape[0]
+        #natom_qm = qm_crds.shape[0]
 
         if esp_chg is None:
             esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
@@ -245,7 +245,13 @@ class QMMMSolver(object):
         enr_vdw = 0.0
         enr_coul = 0.0
 
-        for iatom in range(natom_qm):
+        #for iatom in range(natom_qm):
+        for iat, atmId in self._qm2mm_index:
+            resId, atomName = atmId.split(':')
+            
+            if resId not in ['LIG1'] and atomName in ['CA', 'CB']:
+                continue
+
             ri = qm_crds[iatom]
             sym = self._qm_geom.species[iatom]
             eps_i = _nonbond_list[sym]['epsilon']

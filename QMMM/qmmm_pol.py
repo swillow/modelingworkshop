@@ -245,13 +245,19 @@ class QMMMPol (object):
 
         grds_qm = np.zeros(qm_crds.shape, dtype=np.float)
         grds_prt = np.zeros(prt_crds.shape, dtype=np.float)
-        natom_qm = qm_crds.shape[0]
+        #natom_qm = qm_crds.shape[0]
         #natom_prt = prt_crds.shape[0]
 
         enr_vdw = 0.0
         #enr_coul = 0.0
 
-        for iat in range(natom_qm):
+        for iat, atmId in self._qm2mm_index:
+            resId, atomName = atmId.split(':')
+            
+            if resId not in ['LIG1'] and atomName in ['CA', 'CB']:
+                continue
+
+            #for iat in range(natom_qm):
             ri = qm_crds[iat]
 
             sym = self._qm_geom.species[iat]  # qm_atnm[iat].split(':')[0]

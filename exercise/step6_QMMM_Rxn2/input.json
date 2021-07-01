@@ -3,8 +3,8 @@
     "_job_info": "choose either ener or opt",
     "job": "opt",
     "geom": {
-        "ligand": "../step4_QMMM_Min/ligand_optimized.pdb",
-        "protein": "../step4_QMMM_Min/protein_optimized.pdb",
+        "ligand": "../step5_QMMM_Rxn1/ligand_optimized.pdb",
+        "protein": "../step5_QMMM_Rxn1/protein_optimized.pdb",
         "_qm_residues_info": "provide dict as [res_id] =  charge, Here, 'res_id' is given as 'res_nm + res_num'",
         "qm_residues": {
             "LIG1": 0,

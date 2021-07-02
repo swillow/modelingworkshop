@@ -1,7 +1,7 @@
 {
     "theory": "qmmm",
-    "_job_info": "choose either ener or opt",
-    "job": "opt",
+    "_job_info": "choose either ener, opt, or mm_opt",
+    "job": "mm_opt",
     "geom": {
         "ligand": "../TEV/ligand_short.pdb",
         "protein": "../TEV/protein2.pdb",

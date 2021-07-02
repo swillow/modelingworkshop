@@ -368,6 +368,33 @@ class QMMMPol (object):
             ener_QMMM_vdw, ener_PRT, grds_PRT
 
 
+    def mm_pot_grad (self, qm_geom, prt_crds):
+        ener_PRT = 0.0
+        ener_QMMM_vdw = 0.0
+
+        # A->nm (default length unit in OpenMM is nm)
+        omm_xyz = prt_crds*0.1
+        # energy unit : Hartree
+        # gradient unit : Hartree/Bohr
+        ener_PRT, grds_PRT = \
+            _openmm_energrads(self._prt_sim, omm_xyz)
+        del omm_xyz
+
+        
+        qm_crds = qm_geom.coords*ang2bohr
+        ener_QMMM_vdw, qm_grds, prt_grds = self.qmmm_vdw(qm_crds,
+                                                         prt_crds*ang2bohr)
+
+        
+        grds_PRT += prt_grds
+
+        # length unit in GeomOpt is A (anstrom)  
+        grds_PRT /= bohr2ang
+
+        return ener_PRT, ener_QMMM_vdw, grds_PRT                                                      
+
+
+
     def save_coordinates (self, qm_crds, prt_crds):
 
         self._prt_geom.coords = prt_crds
@@ -494,10 +521,81 @@ class QMMMPol (object):
         self.save_coordinates(qm_crds_old, prt_crds)
 
 
+    def mm_minimize (self):
+
+        qm_natom = len(self._qm_geom)
+
+        def step_func(x):
+            if x < -0.5:
+                x = -0.5
+            elif x > 0.5:
+                x = 0.5
+            return x
+
+        qm_crds = self._qm_geom.coords
+        prt_crds = self._prt_geom.coords
+        ener_last = 0.0
+        
+        qm_geom = self._qm_geom
+
+        for cycle in range (200):
+
+            for atmId in self._qm2mm_index:
+                resId, atomName = atmId.split(':')
+                if resId not in ['LIG1']:
+                    mm_idx = self._qm2mm_index[atmId]
+                    qm_idx = self._qmatm_index[atmId]
+                    if atomName not in ['CA']:
+                        prt_crds[mm_idx] = qm_crds[qm_idx]
+
+            ener_PRT, ener_QMMM_vdw, grds_PRT = self.mm_pot_grad(qm_geom, prt_crds)
+                    
+            ener =  ener_QMMM_vdw + ener_PRT
+            
+            print ('cycle %4d: E_sys %12.6f E_prt %12.6f E_QMMM_vdw %12.6f'% (cycle+1, ener, ener_PRT, ener_QMMM_vdw))
+            
+
+            if (cycle+1) % 50 == 0:    
+                self.save_coordinates (qm_crds, prt_crds)
+
+            dE = ener - ener_last
+            if abs(dE) < 1.0e-4:
+                break
+
+            ener_last = ener
+            
+
+            for atmId in self._qm2mm_index:
+                resId, atomName = atmId.split(':')
+                if resId[:3] not in ['LIG'] and atomName not in ['CA']:
+                    '''
+                    'CA' belongs to MM
+                    Except 'CA', bond, angle, and torsional gradients, which are estimated within MM, are copied to QM particles.
+                    '''
+                    mm_idx = self._qm2mm_index[atmId]
+                    qm_idx = self._qmatm_index[atmId]
+                    
+                    grds_PRT[mm_idx, 0] = 0
+                    grds_PRT[mm_idx, 1] = 0
+                    grds_PRT[mm_idx, 2] = 0
+
+            
+            grds_PRT = np.array(
+                    [[step_func(x), step_func(y), step_func(z)]
+                     for x, y, z in grds_PRT])
+            prt_crds -= 0.01*grds_PRT
+
+                    
+        self.save_coordinates(qm_crds, prt_crds)
+
+
+
     def run(self):
 
         if self._job in ["geomopt", "opt", "gopt"]:
             self.optimize()
+        elif self._job in ['mm_opt', 'mm_min']:
+            self.mm_minimize()
         elif self._job in ["ener", "grad", "energrad"]:
             print('ENER Start')
             
@@ -517,6 +615,9 @@ class QMMMPol (object):
             # if self._l_esp:
             #    print('(R)ESP', esp_chg)
 
+
+
+        
 
 if __name__ == "__main__":
 

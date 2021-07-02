@@ -1,10 +1,10 @@
 {
     "theory": "qmmm",
     "_job_info": "choose either ener or opt",
-    "job": "opt",
+    "job": "ener",
     "geom": {
-        "ligand": "../step5_QMMM_Rxn1/ligand_optimized.pdb",
-        "protein": "../step5_QMMM_Rxn1/protein_optimized.pdb",
+        "ligand": "../step3_MM_Min/ligand_optimized.pdb",
+        "protein": "../step3_MM_Min/protein_optimized.pdb",
         "_qm_residues_info": "provide dict as [res_id] =  charge, Here, 'res_id' is given as 'res_nm + res_num'",
         "qm_residues": {
             "LIG1": 0,
@@ -12,8 +12,8 @@
             "HID46": 0
         },
         "_constraints_info": "[ res_id1:atom_id1, res_id2:atom_id2, k0 (kcal/mol/A^2), r0(Angstrom)]",
-        "constraints": [ ["CYS151:HG","HID46:NE2", 200.0, 1.0],
-		["CYS151:SG","LIG1:C4", 200.0, 1.8]
+        "constraints": [ ["CYS151:HG","HID46:NE2", 0.0, 1.0],
+		["CYS151:SG","LIG1:C4", 0.0, 1.8]
         ]
     },
     "qm": {

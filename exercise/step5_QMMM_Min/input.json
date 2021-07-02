@@ -1,10 +1,10 @@
 {
     "theory": "qmmm",
     "_job_info": "choose either ener or opt",
-    "job": "ener",
+    "job": "opt",
     "geom": {
-        "ligand": "../TEV/ligand_short.pdb",
-        "protein": "../TEV/protein2.pdb",
+        "ligand": "../step3_MM_Min/ligand_optimized.pdb",
+        "protein": "../step3_MM_Min/protein_optimized.pdb",
         "_qm_residues_info": "provide dict as [res_id] =  charge, Here, 'res_id' is given as 'res_nm + res_num'",
         "qm_residues": {
             "LIG1": 0,

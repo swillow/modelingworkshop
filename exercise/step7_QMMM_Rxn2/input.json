@@ -1,0 +1,41 @@
+{
+    "theory": "qmmm",
+    "_job_info": "choose either ener or opt",
+    "job": "opt",
+    "geom": {
+        "ligand": "../step6_QMMM_Rxn1/ligand_optimized.pdb",
+        "protein": "../step6_QMMM_Rxn1/protein_optimized.pdb",
+        "_qm_residues_info": "provide dict as [res_id] =  charge, Here, 'res_id' is given as 'res_nm + res_num'",
+        "qm_residues": {
+            "LIG1": 0,
+            "CYS151": 0,
+            "HID46": 0
+        },
+        "_constraints_info": "[ res_id1:atom_id1, res_id2:atom_id2, k0 (kcal/mol/A^2), r0(Angstrom)]",
+        "constraints": [ ["CYS151:HG","HID46:NE2", 200.0, 1.0],
+		["CYS151:SG","LIG1:C4", 200.0, 1.8]
+        ]
+    },
+    "qm": {
+	"_method_info" : "rhf is supported",
+        "method": "rhf",
+	"_basis_info" : "provide basis set",
+        "basis": "6-31gs",
+        "esp_opts": {
+            "resp": true,
+            "resp_hfree": true
+        }
+    },
+    "mm": {
+	"_mm_info" : "MM energy and gradients are estimated via OpenMM",
+        "Platform": "CPU",
+	"_fname_prmtop_info" : "MM force field is provided in an AMBER prmtop format",
+        "fname_prmtop": "../TEV/protein.prmtop"
+    },
+    "geomopt": {
+        "fname_gopt_xyz": "gopt.xyz",
+        "fname_gopt_log": "gopt.log",
+        "fname_lig_pdb": "ligand_optimized.pdb",
+        "fname_prt_pdb": "protein_optimized.pdb"
+    }
+}

@@ -413,7 +413,7 @@ class QMMMPol (object):
                         self._geomopt['fname_lig_pdb'],
                         self._lig_geom.coords)
 
-    def optimize(self):
+    def optimize(self, l_protein_fixed=False):
         fout_xyz = open(self._geomopt['fname_gopt_xyz'], 'w', 1)
         fout_log = open(self._geomopt['fname_gopt_log'], 'w', 1)
 
@@ -432,10 +432,19 @@ class QMMMPol (object):
         ener_last = 0.0
         qm_grd_norm_last = 0.0
         ener_QM0 = 0.0
+        grds_QM = None
+
         for cycle, qm_geom in enumerate(optimizer):
 
             qm_crds_new = qm_geom.coords
             d_crds = qm_crds_new - qm_crds_old
+
+            qm_dx_norm = np.linalg.norm(d_crds)
+            # To fix a bug in pyberny (sometimes coordinates were not updated.)
+            if qm_dx_norm < 1.0e-3 and grds_QM is not None:
+                qm_crds_new = qm_crds_old - 0.02*grds_QM
+                qm_geom.coords = qm_crds_new
+                qm_dx_norm = np.linalg.norm(d_crds)
 
             for atmId in self._qm2mm_index:
                 resId, atomName = atmId.split(':')
@@ -448,10 +457,27 @@ class QMMMPol (object):
             ener_QMMM, ener_const, grds_QM, esp_QM, \
                 ener_QMMM_vdw, ener_PRT, grds_PRT = self.pot_grad(
                     qm_geom, prt_crds)
+
             if cycle == 0:
                 ener_QM0 = ener_QMMM
             ener_QMMM -= ener_QM0
             ener = ener_QMMM + ener_const + ener_QMMM_vdw + ener_PRT
+
+            for atmId in self._qm2mm_index:
+                resId, atomName = atmId.split(':')
+                if resId[:3] not in ['LIG'] and atomName not in ['CA']:
+                    '''
+                    'CA' belongs to MM
+                    Except 'CA', bond, angle, and torsional gradients, 
+                    which are estimated within MM, are copied to QM particles.
+                    '''
+                    mm_idx = self._qm2mm_index[atmId]
+                    qm_idx = self._qmatm_index[atmId]
+                    grds_QM[qm_idx] += grds_PRT[mm_idx]
+                    grds_PRT[mm_idx, 0] = 0
+                    grds_PRT[mm_idx, 1] = 0
+                    grds_PRT[mm_idx, 2] = 0
+
             qm_grd_norm = np.linalg.norm(grds_QM)
 
             print(' %5d' % qm_natom, file=fout_xyz)
@@ -480,36 +506,22 @@ class QMMMPol (object):
                 self.save_coordinates (qm_crds_new, prt_crds)
 
             dE = ener - ener_last
-            if abs(dE)/qm_natom < 1.0e-8:
+            if abs(dE)/qm_natom < 1.0e-6:
                 break
 
             dG = qm_grd_norm - qm_grd_norm_last
-            if abs(dG)/qm_natom < 1.0e-8:
+            if abs(dG)/qm_natom < 1.0e-4:
                 break
 
             ener_last = ener
             qm_grd_norm_last = qm_grd_norm
             qm_crds_old = qm_crds_new 
 
-            for atmId in self._qm2mm_index:
-                resId, atomName = atmId.split(':')
-                if resId[:3] not in ['LIG'] and atomName not in ['CA']:
-                    '''
-                    'CA' belongs to MM
-                    Except 'CA', bond, angle, and torsional gradients, which are estimated within MM, are copied to QM particles.
-                    '''
-                    mm_idx = self._qm2mm_index[atmId]
-                    qm_idx = self._qmatm_index[atmId]
-                    grds_QM[qm_idx] += grds_PRT[mm_idx]
-                    grds_PRT[mm_idx, 0] = 0
-                    grds_PRT[mm_idx, 1] = 0
-                    grds_PRT[mm_idx, 2] = 0
-
-            
-            grds_PRT = np.array(
+            if not l_protein_fixed:
+                grds_PRT = np.array(
                     [[step_func(x), step_func(y), step_func(z)]
                      for x, y, z in grds_PRT])
-            prt_crds -= 0.01*grds_PRT
+                prt_crds -= 0.02*grds_PRT
 
             grds_QM = np.array(
                 [[step_func(x), step_func(y), step_func(z)]
@@ -559,7 +571,7 @@ class QMMMPol (object):
                 self.save_coordinates (qm_crds, prt_crds)
 
             dE = ener - ener_last
-            if abs(dE) < 1.0e-4:
+            if abs(dE) < 1.0e-3:
                 break
 
             ener_last = ener
@@ -583,7 +595,7 @@ class QMMMPol (object):
             grds_PRT = np.array(
                     [[step_func(x), step_func(y), step_func(z)]
                      for x, y, z in grds_PRT])
-            prt_crds -= 0.01*grds_PRT
+            prt_crds -= 0.02*grds_PRT
 
                     
         self.save_coordinates(qm_crds, prt_crds)
@@ -593,9 +605,13 @@ class QMMMPol (object):
     def run(self):
 
         if self._job in ["geomopt", "opt", "gopt"]:
-            self.optimize()
+            l_protein_fixed=False
+            self.optimize(l_protein_fixed)
         elif self._job in ['mm_opt', 'mm_min']:
             self.mm_minimize()
+        elif self._job in ['qm_opt', 'qm_min']:
+            l_protein_fixed=True
+            self.optimize(l_protein_fixed)
         elif self._job in ["ener", "grad", "energrad"]:
             print('ENER Start')
             

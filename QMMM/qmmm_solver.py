@@ -460,11 +460,11 @@ class QMMMSolver(object):
                 self.save_coordinates(qm_crds_new, prt_crds)
 
             dE = ener - ener_last
-            if abs(dE)/qm_natom < 1.0e-8:
+            if abs(dE)/qm_natom < 1.0e-6:
                 break
 
             dG = qm_grd_norm - qm_grd_norm_last
-            if abs(dG)/qm_natom < 1.0e-8:
+            if abs(dG)/qm_natom < 1.0e-4:
                 break
 
             ener_last = ener

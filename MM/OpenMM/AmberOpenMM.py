@@ -56,11 +56,11 @@ def get_positions_from_pdb(fname_pdb):
 
             coords.append(Vec3(x, y, z))
 
-            if line[:6] in ['ATOM  '] and words[-1] != 'H':
-                prt_heavy_atoms.append(iatom)
             if line[17:20] in nameMembrane and words[-1] != 'H':
                 mem_heavy_atoms.append(iatom)
-
+            elif line[:6] in ['ATOM  '] and words[-1] != 'H':
+                prt_heavy_atoms.append(iatom)
+            
             iatom += 1
 
     return np.array(coords), prt_heavy_atoms, mem_heavy_atoms

@@ -32,6 +32,10 @@ def write_pdb(fname_pdb, fname_pdb_new, crds, box=None):
                 sz = ("%9.3f" % z)[:9]
                 sline = line[:6]+sx+sy+sz+line[33:]
                 print(sline, file=fout)
+        elif len(line) == 0:
+            continue
+        elif len(line) > 0 and line[0] == ' ':
+            continue
         else:
             print(line, file=fout)
     fout.close()

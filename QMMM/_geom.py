@@ -1,7 +1,7 @@
 import sys
 from berny import geomlib
 from pyscf.data.nist import BOHR, HARTREE2J, AVOGADRO
-from simtk.openmm.openmm import AngstromsPerNm
+#from simtk.openmm.openmm import AngstromsPerNm
 import numpy as np
 
 ang2bohr = 1.0/BOHR

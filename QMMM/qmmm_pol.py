@@ -1,7 +1,7 @@
 import numpy as np
-import simtk.unit as unit
-from simtk.openmm import app
-import simtk.openmm as omm
+import openmm.unit as unit
+from openmm import app
+import openmm as omm
 # from esp import esp_atomic_charges, make_rdm1_with_orbital_response
 
 import sys
@@ -10,7 +10,7 @@ import xml.etree.ElementTree as etree
 import time
 # from pyscf import gto, scf, mp, qmmm, grad, lib
 from pyscf.data.nist import BOHR, HARTREE2J, AVOGADRO
-from simtk.unit import constants
+from openmm.unit import constants
 from berny import Berny, geomlib
 
 import _geom

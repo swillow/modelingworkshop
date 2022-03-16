@@ -234,12 +234,12 @@ class QMMMSolver(object):
 
     def qmmm_Coul_vdw(self, qm_crds, prt_crds, esp_chg=None):
 
-        grds_qm = np.zeros(qm_crds.shape, dtype=np.float)
-        grds_prt = np.zeros(prt_crds.shape, dtype=np.float)
+        grds_qm = np.zeros(qm_crds.shape, dtype=np.float64)
+        grds_prt = np.zeros(prt_crds.shape, dtype=np.float64)
         #natom_qm = qm_crds.shape[0]
 
         if esp_chg is None:
-            esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
+            esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float64)
 
         ener_qmmm = 0.0
         enr_vdw = 0.0
@@ -325,10 +325,10 @@ class QMMMSolver(object):
         qm_crds = qm_geom.coords*ang2bohr
         qm_atnm = qm_geom.species
 
-        esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float)
+        esp_chg = np.zeros(qm_crds.shape[0], dtype=np.float64)
 
         # QM
-        grds_QM = np.zeros(qm_crds.shape, dtype=np.float)
+        grds_QM = np.zeros(qm_crds.shape, dtype=np.float64)
 
         ener_QM, grds_QM, esp_chg = \
             _pyscf._pyscf_qm(qm_atnm, qm_crds,

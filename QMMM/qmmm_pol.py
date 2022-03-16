@@ -243,8 +243,8 @@ class QMMMPol (object):
 
     def qmmm_vdw(self, qm_crds, prt_crds):
 
-        grds_qm = np.zeros(qm_crds.shape, dtype=np.float)
-        grds_prt = np.zeros(prt_crds.shape, dtype=np.float)
+        grds_qm = np.zeros(qm_crds.shape, dtype=np.float64)
+        grds_prt = np.zeros(prt_crds.shape, dtype=np.float64)
         #natom_qm = qm_crds.shape[0]
         #natom_prt = prt_crds.shape[0]
 

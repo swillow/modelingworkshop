@@ -99,15 +99,14 @@ def run_min(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        #mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
-        #                            pz = abs(z - z0);')
-
-        #mem_rest.addGlobalParameter('fc_pos', fc_pos)
-        #mem_rest.addPerParticleParameter('z0')
-        #for iatom in mem_heavy_atoms:
-        #    x, y, z = 0.1*crds_A[iatom]
-        #    mem_rest.addParticle(iatom, [z])
-        #system.addForce(mem_rest)
+        mem_rest = CustomExternalForce('fc_pos*periodicdistance (x, y, z, x, y, z0)^2')
+        
+        mem_rest.addGlobalParameter('fc_pos', fc_pos)
+        mem_rest.addPerParticleParameter('z0')
+        for iatom in mem_heavy_atoms:
+            x, y, z = 0.1*crds_A[iatom]
+            mem_rest.addParticle(iatom, [z])
+        system.addForce(mem_rest)
 
     integrator = LangevinIntegrator(
         300*kelvin, 1.0/picosecond, 1.0*femtoseconds)
@@ -180,15 +179,14 @@ def run_nvt(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        #mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
-        #                        pz = abs(z - z0);')
-
-        #mem_rest.addGlobalParameter('fc_pos', fc_pos)
-        #mem_rest.addPerParticleParameter('z0')
-        #for iatom in mem_heavy_atoms:
-        #    x, y, z = crds_A[iatom]/10
-        #    mem_rest.addParticle(iatom, [z])
-        #system.addForce(mem_rest)
+        mem_rest = CustomExternalForce('fc_pos*periodicdistance (x,y,z,x,y,z0)^2')
+        
+        mem_rest.addGlobalParameter('fc_pos', fc_pos)
+        mem_rest.addPerParticleParameter('z0')
+        for iatom in mem_heavy_atoms:
+            x, y, z = crds_A[iatom]/10
+            mem_rest.addParticle(iatom, [z])
+        system.addForce(mem_rest)
 
     dt = 1.0
     if "dt_fs" in options:

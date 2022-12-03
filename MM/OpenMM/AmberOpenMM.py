@@ -43,7 +43,7 @@ def write_pdb(fname_pdb, fname_pdb_new, crds, box=None):
 
 def get_positions_from_pdb(fname_pdb):
     nameMembrane = ['DPP', 'POP']
-    nameWater = ['HOH', 'WAT']
+
     f_pdb = open(fname_pdb)
     l_pdb = f_pdb.read().split('\n')
     f_pdb.close()
@@ -63,9 +63,8 @@ def get_positions_from_pdb(fname_pdb):
 
             if line[17:20] in nameMembrane and words[-1] != 'H':
                 mem_heavy_atoms.append(iatom)
-            elif line[17:20] not in nameWater:
-                if line[:6] in ['ATOM  '] and words[-1] != 'H':
-                    prt_heavy_atoms.append(iatom)
+            elif line[:6] in ['ATOM  '] and words[-1] != 'H':
+                prt_heavy_atoms.append(iatom)
             
             iatom += 1
 

@@ -87,10 +87,7 @@ def run_min(options):
     # fc_pos = 1000.0  # kJ/mol/nm^2
     if 'fc_pos' in options:
         fc_pos = options["fc_pos"]  # kJ/mol/nm^2
-        prt_rest = CustomExternalForce('fc_pos*(px*px + py*py + pz*pz);\
-                                px = abs(x - x0); \
-                                py = abs(y - y0); \
-                                pz = abs(z - z0);')
+        prt_rest = CustomExternalForce('fc_pos*periodicdistance (x, y, z, x0, y0, z0)^2')
 
         prt_rest.addGlobalParameter('fc_pos', fc_pos)
         prt_rest.addPerParticleParameter('x0')
@@ -102,15 +99,15 @@ def run_min(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
-                                    pz = abs(z - z0);')
+        #mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
+        #                            pz = abs(z - z0);')
 
-        mem_rest.addGlobalParameter('fc_pos', fc_pos)
-        mem_rest.addPerParticleParameter('z0')
-        for iatom in mem_heavy_atoms:
-            x, y, z = 0.1*crds_A[iatom]
-            mem_rest.addParticle(iatom, [z])
-        system.addForce(mem_rest)
+        #mem_rest.addGlobalParameter('fc_pos', fc_pos)
+        #mem_rest.addPerParticleParameter('z0')
+        #for iatom in mem_heavy_atoms:
+        #    x, y, z = 0.1*crds_A[iatom]
+        #    mem_rest.addParticle(iatom, [z])
+        #system.addForce(mem_rest)
 
     integrator = LangevinIntegrator(
         300*kelvin, 1.0/picosecond, 1.0*femtoseconds)
@@ -171,11 +168,8 @@ def run_nvt(options):
     if "fc_pos" in options:
         # Restraints
         fc_pos = options['fc_pos']  # kJ/mol/nm^2
-        prt_rest = CustomExternalForce('fc_pos*(px*px + py*py + pz*pz);\
-                                px = abs(x - x0); \
-                                py = abs(y - y0); \
-                                pz = abs(z - z0);')
-
+        prt_rest = CustomExternalForce('fc_pos*periodicdistance (x,y,z,x0,y0,z0)^2')
+        
         prt_rest.addGlobalParameter('fc_pos', fc_pos)
         prt_rest.addPerParticleParameter('x0')
         prt_rest.addPerParticleParameter('y0')
@@ -186,15 +180,15 @@ def run_nvt(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
-                                pz = abs(z - z0);')
+        #mem_rest = CustomExternalForce('fc_pos*(pz*pz);\
+        #                        pz = abs(z - z0);')
 
-        mem_rest.addGlobalParameter('fc_pos', fc_pos)
-        mem_rest.addPerParticleParameter('z0')
-        for iatom in mem_heavy_atoms:
-            x, y, z = crds_A[iatom]/10
-            mem_rest.addParticle(iatom, [z])
-        system.addForce(mem_rest)
+        #mem_rest.addGlobalParameter('fc_pos', fc_pos)
+        #mem_rest.addPerParticleParameter('z0')
+        #for iatom in mem_heavy_atoms:
+        #    x, y, z = crds_A[iatom]/10
+        #    mem_rest.addParticle(iatom, [z])
+        #system.addForce(mem_rest)
 
     dt = 1.0
     if "dt_fs" in options:

@@ -87,7 +87,7 @@ def run_min(options):
     # fc_pos = 1000.0  # kJ/mol/nm^2
     if 'fc_pos' in options:
         fc_pos = options["fc_pos"]  # kJ/mol/nm^2
-        prt_rest = CustomExternalForce('fc_pos*periodicdistance (x, y, z, x0, y0, z0)^2')
+        prt_rest = CustomExternalForce('fc_pos*periodicdistance(x,y,z,x0,y0,z0)^2')
 
         prt_rest.addGlobalParameter('fc_pos', fc_pos)
         prt_rest.addPerParticleParameter('x0')
@@ -99,7 +99,7 @@ def run_min(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        mem_rest = CustomExternalForce('fc_pos*periodicdistance (x, y, z, x, y, z0)^2')
+        mem_rest = CustomExternalForce('fc_pos*periodicdistance(x,y,z,x,y,z0)^2')
         
         mem_rest.addGlobalParameter('fc_pos', fc_pos)
         mem_rest.addPerParticleParameter('z0')
@@ -167,7 +167,7 @@ def run_nvt(options):
     if "fc_pos" in options:
         # Restraints
         fc_pos = options['fc_pos']  # kJ/mol/nm^2
-        prt_rest = CustomExternalForce('fc_pos*periodicdistance (x,y,z,x0,y0,z0)^2')
+        prt_rest = CustomExternalForce('fc_pos*periodicdistance(x,y,z,x0,y0,z0)^2')
         
         prt_rest.addGlobalParameter('fc_pos', fc_pos)
         prt_rest.addPerParticleParameter('x0')
@@ -179,7 +179,7 @@ def run_nvt(options):
             prt_rest.addParticle(iatom, [x, y, z])
         system.addForce(prt_rest)
 
-        mem_rest = CustomExternalForce('fc_pos*periodicdistance (x,y,z,x,y,z0)^2')
+        mem_rest = CustomExternalForce('fc_pos*periodicdistance(x,y,z,x,y,z0)^2')
         
         mem_rest.addGlobalParameter('fc_pos', fc_pos)
         mem_rest.addPerParticleParameter('z0')
